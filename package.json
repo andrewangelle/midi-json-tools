@@ -1,0 +1,18 @@
+{
+  "name": "@json-to-midi/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "19.2.3",
+    "@nx/workspace": "19.2.3",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "nx": "19.2.3",
+    "prettier": "^2.6.2",
+    "typescript": "~5.4.2"
+  }
+}
