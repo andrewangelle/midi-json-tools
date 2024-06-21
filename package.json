@@ -1,8 +1,6 @@
 {
   "name": "midi-json-tools",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "license": "MIT",
   "scripts": {
     "test": "nx run-many -t=test",
@@ -24,10 +22,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "npm run lint",
-      "npm run format"
-    ]
+    "*.{ts,tsx}": ["npm run lint", "npm run format"]
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
