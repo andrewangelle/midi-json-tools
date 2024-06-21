@@ -10,7 +10,7 @@
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/json-to-midi",
+        "outputPath": "./packages/json-to-midi/dist",
         "main": "packages/json-to-midi/src/index.ts",
         "tsConfig": "packages/json-to-midi/tsconfig.lib.json",
         "assets": ["packages/json-to-midi/*.md"]

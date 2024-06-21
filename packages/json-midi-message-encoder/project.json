@@ -10,7 +10,7 @@
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/json-midi-message-encoder",
+        "outputPath": "./packages/json-midi-message-encoder/dist",
         "main": "packages/json-midi-message-encoder/src/index.ts",
         "tsConfig": "packages/json-midi-message-encoder/tsconfig.lib.json",
         "assets": ["packages/json-midi-message-encoder/*.md"]

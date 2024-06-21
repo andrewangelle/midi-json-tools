@@ -4,7 +4,7 @@
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "publishConfig": {
-    "directory": "../../dist/json-midi-message-encoder"
+    "directory": "dist"
   },
   "repository": {
     "type": "git",
