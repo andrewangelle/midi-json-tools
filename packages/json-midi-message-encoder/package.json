@@ -1,9 +1,19 @@
 {
   "name": "@midi-json-tools/json-midi-message-encoder",
   "version": "0.1.0",
-  "dependencies": {},
-  "main": "./index.js",
-  "module": "./index.mjs",
-  "typings": "./index.d.ts",
-  "private": true
+  "author": "Andrew Angelle <andrewangelle@gmail.com>",
+  "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
+  "publishConfig": {
+    "directory": "../../dist/json-midi-message-encoder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewangelle/midi-json-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewangelle/midi-json-tools/issues"
+  },
+  "main": "./src/index.ts",
+  "typings": "./src/types.ts",
+  "dependencies": {}
 }
