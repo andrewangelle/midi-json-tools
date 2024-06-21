@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/midi-to-json",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "publishConfig": {
@@ -15,6 +15,8 @@
   },
   "main": "./src/index.ts",
   "typings": "./src/types.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {}
 }

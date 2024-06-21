@@ -1,5 +1,11 @@
 # @midi-json-tools/json-midi-message-encoder
 
+## 0.2.0
+
+### Minor Changes
+
+- Trying again
+
 ## 0.1.1
 
 ### Patch Changes
