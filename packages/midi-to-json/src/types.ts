@@ -1,5 +1,3 @@
-import type { TransferListItem } from 'node:worker_threads';
-
 export interface MidiChannelPrefixEvent extends MidiMetaEvent {
   channelPrefix: number;
 }
@@ -213,5 +211,4 @@ export type Value =
   | Array<Value>
   | RegExp
   | TypedArray
-  | ValueMap
-  | TransferListItem;
+  | ValueMap;
