@@ -15,5 +15,6 @@
   },
   "main": "./src/index.ts",
   "typings": "./src/types.ts",
+  "files": ["dist"],
   "dependencies": {}
 }
