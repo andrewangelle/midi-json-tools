@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.0.0
+
+### Major Changes
+
+- First release
+
 ## 0.2.0
 
 ### Minor Changes
