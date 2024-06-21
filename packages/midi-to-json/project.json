@@ -1,0 +1,32 @@
+{
+  "name": "midi-to-json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/midi-to-json/src",
+  "projectType": "library",
+  "tags": [],
+  "implicitDependencies": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/midi-to-json",
+        "main": "packages/midi-to-json/src/index.ts",
+        "tsConfig": "packages/midi-to-json/tsconfig.lib.json",
+        "assets": ["packages/midi-to-json/*.md"]
+      }
+    },
+    "linter": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx biome check . --apply {projectRoot}"
+      }
+    },
+    "fmt": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx biome format . --write {projectRoot}"
+      }
+    }
+  }
+}

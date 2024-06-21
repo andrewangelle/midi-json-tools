@@ -10,11 +10,21 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": ["es2020"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+     "@midi-json-tools/json-to-midi": [
+        "packages/json-to-midi/src/index.ts"
+      ],
+      "@midi-json-tools/json-midi-message-encoder": [
+        "packages/json-midi-message-encoder/src/index.ts"
+      ],
+      "@midi-json-tools/midi-to-json": [
+        "packages/midi-to-json/src/index.ts"
+      ],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
