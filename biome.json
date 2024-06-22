@@ -5,11 +5,12 @@
   },
   "files": {
     "ignore": [
-      ".nx/**/*",
+      ".turbo/**/*",
       "./dist/**/*",
       "**/test/fixtures/**/*",
       "**/*/tsconfig.spec.json",
-      "./tsconfig.base.json"
+      "./tsconfig.base.json",
+      "**/dist/**/*"
     ]
   },
   "linter": {
