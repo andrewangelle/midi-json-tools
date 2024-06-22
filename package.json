@@ -14,7 +14,8 @@
     "example:clean": "rm -rf ./examples/example-output && mkdir ./examples/example-output",
     "examples": "npm run build && npm run example:clean && npm run example:json-to-midi && npm run example:midi-to-json",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "release": "sh ./.github/release.sh"
   },
   "husky": {
     "hooks": {

@@ -1,10 +1,10 @@
 name: CI
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   actions: read
@@ -31,6 +31,4 @@ jobs:
       - run: npm ci
       - uses: nrwl/nx-set-shas@v4
 
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: npx nx-cloud record -- echo Hello World
-      - run: npx nx affected -t lint test build --base=main --head=HEAD
+      - run: npx nx-cloud record -- npx nx affected -t lint test build --base=${{ github.head_ref }} --head=${{github.head_ref}}
