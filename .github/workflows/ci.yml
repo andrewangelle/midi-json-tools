@@ -1,4 +1,4 @@
-name: CI
+name: Pull Request
 
 on:
   pull_request:
@@ -31,4 +31,4 @@ jobs:
       - run: npm ci
       - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx-cloud record -- npx nx affected -t lint test build --base=${{ github.head_ref }} --head=${{github.head_ref}}
+      - run: npx nx-cloud record -- npx nx affected -t lint test build --base=${{ github.base_ref }} --head=${{ github.head_ref}}
