@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.0.4
+
+### Patch Changes
+
+- 53ce1f4: Testing automation
+
 ## 1.0.3
 
 ### Patch Changes
