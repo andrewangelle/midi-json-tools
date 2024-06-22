@@ -31,4 +31,4 @@ jobs:
       - run: npm ci
       - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx affected -t lint test build --base=main --head=HEAD
+      - run: npx nx affected -t lint test build --base=$NX_BASE --head=$NX_HEAD
