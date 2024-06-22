@@ -38,3 +38,13 @@ const response = await fs.readFile(filename);
 const result = midiToJson(response.buffer);
 
 ```
+
+Works with Deno as well
+
+```typescript
+import { midiToJson } from "jsr:@midi-json-tools/midi-to-json";
+
+const inputMIDIFile = `./Example.mid`;
+const midiFile = await Deno.readFile(inputFile);
+const json = midiToJson(midiFile.buffer);
+```
