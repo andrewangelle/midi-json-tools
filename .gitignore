@@ -3,6 +3,8 @@
 .npmrc
 **/*/dist
 
+.turbo
+
 # compiled output
 dist
 tmp
@@ -40,9 +42,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-.nx/cache
-.nx/workspace-data
 
 # Examples
 examples/example-output/**/*

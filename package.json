@@ -1,14 +1,14 @@
 {
   "name": "midi-json-tools",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "MIT",
   "scripts": {
-    "test": "nx run-many -t=test",
-    "lint": "nx run-many -t=linter",
-    "format": "nx run-many -t=fmt",
-    "build": "npm run build:clean && npm run build:all",
-    "build:all": "nx run-many -t=build",
-    "build:clean": "rm -rf ./packages/midi-to-json/dist ./packages/json-to-midi/dist ./packages/json-midi-message-encoder/dist",
+    "test": "turbo run test",
+    "format": "turbo run format",
+    "lint": "turbo run lint",
+    "build": "turbo run build",
     "example:json-to-midi": "node ./examples/json-to-midi.mjs",
     "example:midi-to-json": "node ./examples/midi-to-json.mjs",
     "example:clean": "rm -rf ./examples/example-output && mkdir ./examples/example-output",
@@ -24,23 +24,19 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["npm run lint", "npm run format"]
+    "*.{ts,tsx}": [
+      "npx biome check packages --write",
+      "npx biome format packages --write"
+    ]
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",
-    "@nx/js": "19.2.3",
-    "@nx/vite": "19.2.3",
-    "@nx/web": "19.2.3",
-    "@nx/workspace": "19.2.3",
-    "@swc-node/register": "~1.9.1",
-    "@swc/core": "~1.5.7",
-    "@swc/helpers": "~0.5.11",
     "@types/node": "18.16.9",
     "@vitest/coverage-v8": "^1.0.4",
     "@vitest/ui": "^1.3.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "nx": "19.2.3",
+    "turbo": "^2.0.4",
     "typescript": "~5.4.2",
     "vite": "^5.0.0",
     "vite-plugin-dts": "~3.8.1",
@@ -48,5 +44,6 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.5"
-  }
+  },
+  "packageManager": "npm@10.0.0"
 }

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "outputs": [] 
+    },
+    "json-to-midi#build": {
+      "cache": true,
+      "outputs": [
+        "packages/json-to-midi/dist/**"
+      ],
+      "dependsOn": ["json-midi-message-encoder#build", "build"]
+    },
+    "midi-to-json#build": {
+      "cache": true,
+      "outputs": [
+        "packages/midi-to-json/dist/**"
+      ],
+      "dependsOn": ["json-midi-message-encoder#build", "build"]
+    },
+    "json-midi-message-encoder#build": {
+      "cache": true,
+      "outputs": [
+        "packages/json-midi-message-encoder/dist/**"
+      ],
+      "dependsOn": ["build"]
+    },
+    "format": {
+      "cache": false,
+      "dependsOn": ["^format"]
+    },
+    "lint": {
+      "cache": false,
+      "dependsOn": ["^lint"]
+    },
+    "json-to-midi#lint": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "midi-to-json#lint": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "json-midi-message-encoder#lint": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "test": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["^build", "^test"] 
+    },
+    "json-to-midi#test": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["test", "build"]
+    },
+    "midi-to-json#test": {
+      "cache": true,
+      "outputs": [ ],
+      "dependsOn": ["test", "build"]
+    },
+    "json-midi-message-encoder#test": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["test", "build"]
+    }
+  }
+}
