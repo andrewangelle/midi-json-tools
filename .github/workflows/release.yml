@@ -1,16 +1,15 @@
-name: Release
+name: Changesets Release
 
 on:
   push:
     branches:
       - main
-    workflow_dispatch:
-
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+  workflow_dispatch:
 
 jobs:
   release:
-    name: Release
+    name: Changesets Release
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -28,7 +27,11 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm run release
+          publish: "npm run ci:publish",
+          version: "npm run ci:version",
+          commit: "chore(release): changesets versioning & publication"
+          title: "Changesets: Versioning & Publication"
+          createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

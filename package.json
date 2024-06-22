@@ -15,7 +15,8 @@
     "examples": "npm run build && npm run example:clean && npm run example:json-to-midi && npm run example:midi-to-json",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "release": "sh ./.github/release.sh"
+    "ci:publish": "npm run build && npx changeset publish",
+    "ci:version": "npx changeset version"
   },
   "husky": {
     "hooks": {
