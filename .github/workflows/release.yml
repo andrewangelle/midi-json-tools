@@ -34,8 +34,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: "npm run ci:publish"
-          version: "npm run ci:version"
+          publish: npm run ci:publish
+          version: npm run ci:version
           commit: "chore(release): changesets versioning & publication"
           title: "Changesets: Versioning & Publication"
           createGithubReleases: true
