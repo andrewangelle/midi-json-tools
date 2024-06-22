@@ -98,3 +98,13 @@ const example: MidiFile = {
 
 const midiFile = jsonToMidi(example);
 ```
+
+Works with Deno as well
+
+```typescript
+import { jsonToMidi } from "jsr:@midi-json-tools/json-to-midi";
+
+const inputJSONFile = `./Example.json`;
+const jsonFile = await Deno.readFile(inputFile);
+const midi = jsonToMidi(jsonFile);
+```
