@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/json-to-midi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "publishConfig": {

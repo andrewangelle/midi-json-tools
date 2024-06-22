@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.0.1
+
+### Patch Changes
+
+- Testing publish
+
 ## 1.0.0
 
 ### Major Changes
