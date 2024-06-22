@@ -4,7 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".changeset/**"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
+
+env:
+  CI: true
+  HUSKY: 0
 
 jobs:
   release:
