@@ -1,5 +1,11 @@
 # @midi-json-tools/json-to-midi
 
+## 1.0.3
+
+### Patch Changes
+
+- f128621: Testing automated publishing
+
 ## 1.0.2
 
 ### Patch Changes
