@@ -3,9 +3,9 @@ Packages to convert a binary MIDI file to JSON and back again.
 
 ## Credit
 
-These packages and the majority of their code originate from [midi-json-parser](https://github.com/chrisguttandin/midi-json-parser) and [json-midi-encoder](https://github.com/chrisguttandin/json-midi-encoder). I've condensed it to a monorepo and removed necessary bits to make it work in a node environment. 
+These packages and the majority of their code originate from [midi-json-parser](https://github.com/chrisguttandin/midi-json-parser) and [json-midi-encoder](https://github.com/chrisguttandin/json-midi-encoder). I've condensed it to a monorepo and removed necessary bits to make it work in a node environment.
 
-## Getting Started
+## Getting Started 
 
 Clone the repo
 ```

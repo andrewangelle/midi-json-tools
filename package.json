@@ -8,7 +8,7 @@
     "format": "nx run-many -t=fmt",
     "build": "npm run build:clean && npm run build:all",
     "build:all": "nx run-many -t=build",
-    "build:clean": "rm -rf dist",
+    "build:clean": "rm -rf ./packages/midi-to-json/dist ./packages/json-to-midi/dist ./packages/json-midi-message-encoder/dist",
     "example:json-to-midi": "node ./examples/json-to-midi.mjs",
     "example:midi-to-json": "node ./examples/midi-to-json.mjs",
     "example:clean": "rm -rf ./examples/example-output && mkdir ./examples/example-output",

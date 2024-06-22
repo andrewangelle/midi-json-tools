@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
+  "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/json-to-midi/README.md",
   "publishConfig": {
     "directory": "dist"
   },
