@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/json-midi-message-encoder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/json-midi-message-encoder/README.md",
