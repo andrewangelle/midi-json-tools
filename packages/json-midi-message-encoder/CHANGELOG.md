@@ -1,5 +1,11 @@
 # @midi-json-tools/json-midi-message-encoder
 
+## 1.0.2
+
+### Patch Changes
+
+- f027126: Testing Automated publish
+
 ## 1.0.1
 
 ### Patch Changes
