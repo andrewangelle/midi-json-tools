@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 1.0.4
+
+### Patch Changes
+
+- 53ce1f4: Testing automation
+- Updated dependencies [53ce1f4]
+  - @midi-json-tools/json-midi-message-encoder@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes
