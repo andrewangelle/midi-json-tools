@@ -1,5 +1,5 @@
+import { createArrayBufferWithDataView } from '@midi-json-tools/json-midi-message-encoder';
 import type { MidiEvent } from '@midi-json-tools/midi-to-json';
-import { createArrayBufferWithDataView } from './create-array-buffer-with-data-view';
 
 /**
  * This function encodes a JSON representation of midi header information to binary
