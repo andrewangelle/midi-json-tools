@@ -19,8 +19,6 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      action: write
       id-token: write # The OIDC ID token is used for authentication with JSR. 
     steps:
       - name: Checkout Repo
