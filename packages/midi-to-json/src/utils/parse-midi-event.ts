@@ -11,6 +11,9 @@ import type {
 } from '../types';
 import { hexifyNumber } from './hexify-number';
 
+/**
+ * This function handles parsing the event information for an event of a given midi track
+ */
 export function parseMidiEvent(
   statusByte: number,
   dataView: DataView,

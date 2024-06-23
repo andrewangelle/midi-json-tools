@@ -1,5 +1,8 @@
 import { stringify } from './stringify';
 
+/**
+ * This function handles parsing the header information for a midi file
+ */
 export function parseHeaderChunk(dataView: DataView) {
   if (dataView.byteLength < 14) {
     throw new Error(

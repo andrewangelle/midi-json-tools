@@ -2,6 +2,9 @@ import { isMidiStatusEvent } from './is-midi-status-event';
 import { parseEvent } from './parse-event';
 import { stringify } from './stringify';
 
+/**
+ * This function handles parsing the given track from a midi file
+ */
 export function parseTrackChunk(dataView: DataView, offset: number) {
   if (stringify(dataView, offset, 4) !== 'MTrk') {
     throw new Error(

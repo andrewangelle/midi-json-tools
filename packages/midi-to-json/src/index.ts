@@ -4,6 +4,9 @@ import { parseTrackChunk } from './utils/parse-track-chunk';
 
 export * from './types';
 
+/**
+ * This function takes in an array buffer and returns a JSON representation of MIDI data
+ */
 export function midiToJson(arrayBuffer: ArrayBuffer): MidiFile {
   const dataView = new DataView(arrayBuffer);
 
