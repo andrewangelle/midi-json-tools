@@ -1,4 +1,6 @@
 # @midi-json-tools/midi-to-json
+  [![npm version](https://badge.fury.io/js/@midi-json-tools%2Fmidi-to-json.svg)](https://www.npmjs.com/package/@midi-json-tools/midi-to-json) 
+  [![@midi-json-tools/midi-to-json](https://jsr-badge.deno.dev/@midi-json-tools/midi-to-json/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/midi-to-json)
 
 Library to convert an encoded binary MIDI file to a human readable JSON format.
 
@@ -9,17 +11,29 @@ This package and the majority of its code originates from [midi-json-parser](htt
 
 ## Usage
 
+*NPM*
 ```
 npm i @midi-json-tools/midi-to-json
 ```
-or 
+
+*Yarn*
 ```
 yarn add @midi-json-tools/midi-to-json
 ```
-or
 
+*PNPM*
 ```
 pnpm add @midi-json-tools/midi-to-json
+```
+
+*[JSR](https://jsr.io) / Deno*
+```typescript
+import { midiToJson } from 'jsr:@midi-json-tools/midi-to-json'
+```
+
+*ESM.SH*
+```typescript
+import { midiToJson } from "https://esm.sh/@midi-json-tools/midi-to-json@latest";
 ```
 
 #### Example

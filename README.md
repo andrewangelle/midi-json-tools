@@ -5,6 +5,19 @@ Packages to convert a binary MIDI file to JSON and back again.
 
 These packages and the majority of their code originate from [midi-json-parser](https://github.com/chrisguttandin/midi-json-parser) and [json-midi-encoder](https://github.com/chrisguttandin/json-midi-encoder). I've condensed it to a monorepo and removed necessary bits to make it work in a node environment.
 
+###  Packages
+*__@midi-json-tools/midi-to-json__*
+  [![npm version](https://badge.fury.io/js/@midi-json-tools%2Fmidi-to-json.svg)](https://www.npmjs.com/package/@midi-json-tools/midi-to-json) 
+  [![@midi-json-tools/midi-to-json](https://jsr-badge.deno.dev/@midi-json-tools/midi-to-json/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/midi-to-json)
+
+*__@midi-json-tools/json-to-midi__*
+  [![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-to-midi.svg)](https://www.npmjs.com/package/@midi-json-tools/json-to-midi)
+  [![@midi-json-tools/json-to-midi](https://jsr-badge.deno.dev/@midi-json-tools/json-to-midi/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/json-to-midi)
+
+*__@midi-json-tools/json-midi-message-encoder__*
+  [![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-midi-message-encoder.svg)](https://www.npmjs.com/package/@midi-json-tools/json-midi-message-encoder)
+  [![@midi-json-tools/json-midi-message-encoder](https://jsr-badge.deno.dev/@midi-json-tools/json-midi-message-encoder/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/json-midi-message-encoder)
+
 ## Getting Started 
 
 Clone the repo
