@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 1.0.7
+
+### Patch Changes
+
+- eaaba5d: Testing JSR publish
+- Updated dependencies [eaaba5d]
+  - @midi-json-tools/json-midi-message-encoder@1.0.7
+
 ## 1.0.6
 
 ### Patch Changes
