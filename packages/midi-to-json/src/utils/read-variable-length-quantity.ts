@@ -1,3 +1,6 @@
+/**
+ * This function handles deciphering the length of a midi event
+ */
 export function readVariableLengthQuantity(dataView: DataView, offset: number) {
   let nextOffset = offset;
   let value = 0;

@@ -4,6 +4,9 @@ import { parseMidiEvent } from './parse-midi-event';
 import { parseSysexEvent } from './parse-sysex-event';
 import { readVariableLengthQuantity } from './read-variable-length-quantity';
 
+/**
+ * This function handles deciding how to parse the given midi event from a midi track
+ */
 export function parseEvent(
   dataView: DataView,
   offset: number,

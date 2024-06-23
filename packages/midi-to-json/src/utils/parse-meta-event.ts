@@ -24,6 +24,9 @@ import { hexifyNumber } from './hexify-number';
 import { readVariableLengthQuantity } from './read-variable-length-quantity';
 import { stringify } from './stringify';
 
+/**
+ * This function handles parsing the meta information for a midi event
+ */
 export function parseMetaEvent(
   dataView: DataView,
   offset: number,
