@@ -1,6 +1,9 @@
+/**
+ * This function takes in an array of ArrayBuffers and joins them into one ArrayBuffer
+ */
 export function joinArrayBuffers(
   arrayBuffers: (ArrayBuffer | SharedArrayBuffer)[],
-) {
+): ArrayBufferLike {
   const byteLength = arrayBuffers.reduce(
     (bytLngth, arrayBuffer) => bytLngth + arrayBuffer.byteLength,
     0,

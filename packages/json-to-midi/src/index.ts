@@ -3,7 +3,14 @@ import { encodeHeaderChunk } from './utils/encode-header-chunk';
 import { encodeTrackChunk } from './utils/encode-track-chunk';
 import { joinArrayBuffers } from './utils/join-array-buffers';
 
-export function jsonToMidi({ division, format, tracks }: MidiFile) {
+/**
+ * This function takes in a JSON representation of a MIDI file and encodes it to binary
+ */
+export function jsonToMidi({
+  division,
+  format,
+  tracks,
+}: MidiFile): ArrayBufferLike {
   const arrayBuffers = [];
 
   try {
