@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/json-to-midi",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/json-to-midi/README.md",
@@ -22,9 +22,9 @@
     "test": "npx vitest"
   },
   "dependencies": {
-    "@midi-json-tools/json-midi-message-encoder": "^1.0.7"
+    "@midi-json-tools/json-midi-message-encoder": "^1.0.8"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "^1.0.7"
+    "@midi-json-tools/midi-to-json": "^1.0.8"
   }
 }
