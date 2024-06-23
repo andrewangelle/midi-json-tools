@@ -1,7 +1,8 @@
 import type { CreateArrayBufferWithDataViewFunction } from '../types';
 
 /**
- * This function takes in a byte length and instantiates an ArrayBuffer and DataView instance
+ * @name createArrayBufferWithDataView
+ * @description This function takes in a byte length and instantiates an ArrayBuffer and DataView instance
  */
 export const createArrayBufferWithDataView: CreateArrayBufferWithDataViewFunction =
   (length) => {

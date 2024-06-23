@@ -1,7 +1,8 @@
 import type { JoinArrayBuffersFunction } from '../types';
 
 /**
- * This function takes in an array of ArrayBuffers and joins them into one ArrayBuffer
+ * @name joinArrayBuffers
+ * @description This function takes in an array of ArrayBuffers and joins them into one ArrayBuffer
  */
 export const joinArrayBuffers: JoinArrayBuffersFunction = (arrayBuffers) => {
   const byteLength = arrayBuffers.reduce(
