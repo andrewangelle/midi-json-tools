@@ -1,5 +1,8 @@
 /**
- * This function takes in an array of ArrayBuffers and joins them into one ArrayBuffer
+ * @name joinArrayBuffers
+ * @description This function takes in an array of ArrayBuffers and joins them into one ArrayBuffer
+ * @param {(ArrayBuffer | SharedArrayBuffer)[]} arrayBuffers
+ * @returns {ArrayBufferLike}
  */
 export function joinArrayBuffers(
   arrayBuffers: (ArrayBuffer | SharedArrayBuffer)[],

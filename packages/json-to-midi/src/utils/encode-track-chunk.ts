@@ -7,7 +7,10 @@ import type { MidiEvent } from '@midi-json-tools/midi-to-json';
 import { joinArrayBuffers } from './join-array-buffers';
 
 /**
- * This function encodes a JSON representation of a midi track to binary
+ * @name encodeTrackChunk
+ * @description This function encodes a JSON representation of a midi track to binary
+ * @param {MidiEvent[]} track
+ * @returns {ArrayBufferLIke}
  */
 export function encodeTrackChunk(track: MidiEvent[]): ArrayBufferLike {
   const { arrayBuffer, dataView } = createArrayBufferWithDataView(8);
