@@ -13,9 +13,6 @@ env:
   CI: true
   HUSKY: 0
 
-permissions:
-  id-token: write # The OIDC ID token is used for authentication with JSR. 
-
 jobs:
   release:
     name: changesets_release
