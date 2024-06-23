@@ -14,7 +14,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npx vite build",
     "format": "npx biome format . --write",
@@ -22,9 +24,9 @@
     "test": "npx vitest"
   },
   "dependencies": {
-    "@midi-json-tools/json-midi-message-encoder": "*"
+    "@midi-json-tools/json-midi-message-encoder": "^1.0.4"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "*"
+    "@midi-json-tools/midi-to-json": "^1.0.4"
   }
 }
