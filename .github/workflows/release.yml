@@ -77,5 +77,6 @@ jobs:
           const core = require('@actions/core')
           let id_token = await core.getIDToken()
           coredemo.setOutput('id_token', id_token)
-      - name: Publish to JSR
-        run: cd ./packages/json-to-midi && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../midi-to-json && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../json-midi-message-encoder && npx jsr publish --token=${{ steps.idtoken.id_token }}
+
+    - name: Publish to JSR
+      run: cd ./packages/json-to-midi && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../midi-to-json && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../json-midi-message-encoder && npx jsr publish --token=${{ steps.idtoken.id_token }}
