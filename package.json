@@ -1,5 +1,6 @@
 {
   "name": "midi-json-tools",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
