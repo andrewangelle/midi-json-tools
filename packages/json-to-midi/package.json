@@ -25,5 +25,8 @@
   },
   "dependencies": {
     "@midi-json-tools/json-midi-message-encoder": "*"
+  },
+  "devDependencies": {
+    "@midi-json-tools/midi-to-json": "*"
   }
 }

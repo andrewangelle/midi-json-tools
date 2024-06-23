@@ -1,11 +1,14 @@
 import type { MidiEvent } from '@midi-json-tools/midi-to-json';
 import { createArrayBufferWithDataView } from './create-array-buffer-with-data-view';
 
+/**
+ * This function encodes a JSON representation of midi header information to binary
+ */
 export function encodeHeaderChunk(
   division: number,
   format: number,
   tracks: MidiEvent[][],
-) {
+): ArrayBuffer {
   const { arrayBuffer, dataView } = createArrayBufferWithDataView(14);
 
   // Write MThd as number.
