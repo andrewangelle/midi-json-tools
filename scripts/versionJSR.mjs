@@ -1,13 +1,19 @@
-import { readFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import * as path from 'node:path';
 import * as url from 'node:url';
 import jsonToMidiPackageJson from '../packages/json-to-midi/package.json' with { type: 'json' };
-import midiToJsonPackageJson from '@midi-json-tools/midi-to-json/package.json' with { type: 'json' };
-import messageEncoderPackageJson from '@midi-json-tools/json-midi-message-encoder/package.json' with { type: 'json' };
+import midiToJsonPackageJson from '../packages/midi-to-json/package.json' with { type: 'json' };
+import messageEncoderPackageJson from '../packages/json-midi-message-encoder/package.json' with { type: 'json' };
 
 import jsonToMidiJSRJson from '../packages/json-to-midi/jsr.json' with { type: 'json' };
-import midiToJsonJSRJson from '@midi-json-tools/midi-to-json/jsr.json' with { type: 'json' };
-import messageEncoderJSRJson from '@midi-json-tools/json-midi-message-encoder/jsr.json' with { type: 'json' };
+import midiToJsonJSRJson from '../packages/midi-to-json/jsr.json' with { type: 'json' };
+import messageEncoderJSRJson from '../packages/json-midi-message-encoder/jsr.json' with { type: 'json' };
+
+const packages = [
+  'jsonToMidi',
+  'midiToJson',
+  'messageEncoder'
+];
 
 const config = {
   versions: {
@@ -33,34 +39,36 @@ const config = {
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-for (const key in config.versions.packageJson){
+for (const packageName of packages){
   let updated;
-  const filePath = path.join(__dirname, config.paths.jsr[key]);
-  const packageJsonVersion = config.versions.packageJson[key];
-  const jsrJsonVersion = config.versions.jsrJson[key]
+
+  const jsrConfigPath = config.paths.jsr[packageName];
+  const packageJsonVersion = config.versions.packageJson[packageName];
+  const jsrJsonVersion = config.versions.jsrJson[packageName]
 
   if(packageJsonVersion !== jsrJsonVersion) {
-    if(key === 'jsonToMidi') {
+    if(packageName === 'jsonToMidi') {
       updated = {
         ...jsonToMidiJSRJson,
-        version: config.versions.packageJson[key]
+        version: packageJsonVersion
       }
     }
   
-    if(key === 'midiToJson') {
+    if(packageName === 'midiToJson') {
       updated = {
         ...midiToJsonJSRJson,
-        version: config.versions.packageJson[key]
+        version: packageJsonVersion
       }
     }
   
-    if(key === 'messageEncoder') {
+    if(packageName === 'messageEncoder') {
       updated = {
         ...messageEncoderJSRJson,
-        version: config.versions.packageJson[key]
+        version: packageJsonVersion
       }
     }
-  
+    const filePath = path.join(__dirname, jsrConfigPath);
+
     await writeFile(filePath, JSON.stringify(updated))
   }
 
