@@ -2,7 +2,12 @@ import { createArrayBufferWithDataView } from '@midi-json-tools/json-midi-messag
 import type { MidiEvent } from '@midi-json-tools/midi-to-json';
 
 /**
- * This function encodes a JSON representation of midi header information to binary
+ * @name encodeHeaderChunk
+ * @description This function encodes a JSON representation of midi header information to binary
+ * @param {number} division
+ * @param {number} format
+ * @param {MidiEvent[][]} tracks
+ * @returns {ArrayBuffer}
  */
 export function encodeHeaderChunk(
   division: number,
