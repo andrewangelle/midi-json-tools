@@ -13,13 +13,14 @@ env:
   CI: true
   HUSKY: 0
 
+permissions:
+  id-token: write # The OIDC ID token is used for authentication with JSR. 
+
 jobs:
   release:
     name: changesets_release
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write # The OIDC ID token is used for authentication with JSR. 
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
