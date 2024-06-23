@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.0.8
+
+### Patch Changes
+
+- 1d63a0c: Add symbol definitions for jsr score
+
 ## 1.0.7
 
 ### Patch Changes
