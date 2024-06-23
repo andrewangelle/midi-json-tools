@@ -29,7 +29,10 @@ import type {
 } from '@midi-json-tools/midi-to-json';
 
 /**
- * type guard for a MidiUnknownTextEvent object
+ * @name isMidiUnknownTextEvent
+ * @description type guard for a MidiUnknownTextEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiUnknownTextEvent(
   event: Partial<MidiEvent>,
@@ -38,7 +41,10 @@ export function isMidiUnknownTextEvent(
 }
 
 /**
- * type guard for a MidiTrackNameEvent object
+ * @name isMidiTrackNameEvent
+ * @description type guard for a MidiTrackNameEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiTrackNameEvent(
   event: Partial<MidiEvent>,
@@ -47,7 +53,10 @@ export function isMidiTrackNameEvent(
 }
 
 /**
- * type guard for a MidiTimeSignatureEvent object
+ * @name isMidiTimeSignatureEvent
+ * @description type guard for a MidiTimeSignatureEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiTimeSignatureEvent(
   event: Partial<MidiEvent>,
@@ -56,7 +65,10 @@ export function isMidiTimeSignatureEvent(
 }
 
 /**
- * type guard for a MidiTextEvent object
+ * @name isMidiTextEvent
+ * @description type guard for a MidiTextEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiTextEvent(
   event: Partial<MidiEvent>,
@@ -68,7 +80,10 @@ export function isMidiTextEvent(
 }
 
 /**
- * type guard for a MidiSysexEvent object
+ * @name isMidiSysexEvent
+ * @description type guard for a MidiSysexEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiSysexEvent(
   event: Partial<MidiEvent>,
@@ -77,7 +92,10 @@ export function isMidiSysexEvent(
 }
 
 /**
- * type guard for a MidiSetTempoEvent object
+ * @name isMidiSetTempoEvent
+ * @description type guard for a MidiSetTempoEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiSetTempoEvent(
   event: Partial<MidiEvent>,
@@ -86,7 +104,10 @@ export function isMidiSetTempoEvent(
 }
 
 /**
- * type guard for a MidiSmpteOffsetEvent object
+ * @name isMidiSmpteOffsetEvent
+ * @description type guard for a MidiSmpteOffsetEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiSmpteOffsetEvent(
   event: Partial<MidiEvent>,
@@ -95,7 +116,10 @@ export function isMidiSmpteOffsetEvent(
 }
 
 /**
- * type guard for a MidiSequencerSpecificEvent object
+ * @name isMidiSequencerSpecificEvent
+ * @description type guard for a MidiSequencerSpecificEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiSequencerSpecificEvent(
   event: Partial<MidiEvent>,
@@ -106,7 +130,10 @@ export function isMidiSequencerSpecificEvent(
 }
 
 /**
- * type guard for a MidiProgramNameEvent object
+ * @name isMidiProgramNameEvent
+ * @description type guard for a MidiProgramNameEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiProgramNameEvent(
   event: Partial<MidiEvent>,
@@ -115,7 +142,10 @@ export function isMidiProgramNameEvent(
 }
 
 /**
- * type guard for a MidiProgramChangeEvent object
+ * @name isMidiProgramChangeEvent
+ * @description type guard for a MidiProgramChangeEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiProgramChangeEvent(
   event: Partial<MidiEvent>,
@@ -124,7 +154,10 @@ export function isMidiProgramChangeEvent(
 }
 
 /**
- * type guard for a MidiPitchBendEvent object
+ * @name isMidiPitchBendEvent
+ * @description type guard for a MidiPitchBendEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiPitchBendEvent(
   event: Partial<MidiEvent>,
@@ -133,7 +166,10 @@ export function isMidiPitchBendEvent(
 }
 
 /**
- * type guard for a MidiNoteOnEvent object
+ * @name isMidiNoteOnEvent
+ * @description type guard for a MidiNoteOnEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiNoteOnEvent(
   event: Partial<MidiEvent>,
@@ -142,7 +178,10 @@ export function isMidiNoteOnEvent(
 }
 
 /**
- * type guard for a MidiNoteOffEvent object
+ * @name isMidiNoteOffEvent
+ * @description type guard for a MidiNoteOffEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiNoteOffEvent(
   event: Partial<MidiEvent>,
@@ -151,7 +190,10 @@ export function isMidiNoteOffEvent(
 }
 
 /**
- * type guard for a MidiMidiPortEvent object
+ * @name isMidiMidiPortEvent
+ * @description type guard for a MidiMidiPortEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiMidiPortEvent(
   event: Partial<MidiEvent>,
@@ -160,7 +202,10 @@ export function isMidiMidiPortEvent(
 }
 
 /**
- * type guard for a MidiMarkerEvent object
+ * @name isMidiMarkerEvent
+ * @description type guard for a MidiMarkerEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiMarkerEvent(
   event: Partial<MidiEvent>,
@@ -169,7 +214,10 @@ export function isMidiMarkerEvent(
 }
 
 /**
- * type guard for a MidiLyricEvent object
+ * @name isMidiLyricEvent
+ * @description type guard for a MidiLyricEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiLyricEvent(
   event: Partial<MidiEvent>,
@@ -178,7 +226,10 @@ export function isMidiLyricEvent(
 }
 
 /**
- * type guard for a MidiKeySignatureEvent object
+ * @name isMidiKeySignatureEvent
+ * @description type guard for a MidiKeySignatureEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiKeySignatureEvent(
   event: Partial<MidiEvent>,
@@ -187,7 +238,10 @@ export function isMidiKeySignatureEvent(
 }
 
 /**
- * type guard for a MidiKeyPressureEvent object
+ * @name isMidiKeyPressureEvent
+ * @description type guard for a MidiKeyPressureEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiKeyPressureEvent(
   event: Partial<MidiEvent>,
@@ -196,7 +250,10 @@ export function isMidiKeyPressureEvent(
 }
 
 /**
- * type guard for a MidiInstrumentNameEvent object
+ * @name isMidiInstrumentNameEvent
+ * @description type guard for a MidiInstrumentNameEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiInstrumentNameEvent(
   event: Partial<MidiEvent>,
@@ -205,7 +262,10 @@ export function isMidiInstrumentNameEvent(
 }
 
 /**
- * type guard for a MidiEndOfTrackEvent object
+ * @name isMidiEndOfTrackEvent
+ * @description type guard for a MidiEndOfTrackEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiEndOfTrackEvent(
   event: Partial<MidiEvent>,
@@ -214,7 +274,10 @@ export function isMidiEndOfTrackEvent(
 }
 
 /**
- * type guard for a MidiDeviceNameEvent object
+ * @name isMidiDeviceNameEvent
+ * @description type guard for a MidiDeviceNameEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiDeviceNameEvent(
   event: Partial<MidiEvent>,
@@ -223,7 +286,10 @@ export function isMidiDeviceNameEvent(
 }
 
 /**
- * type guard for a MidiUnknownTextEvent object
+ * @name isMidiCuePointEvent
+ * @description type guard for a MidiCuePointEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiCuePointEvent(
   event: Partial<MidiEvent>,
@@ -235,7 +301,10 @@ export function isMidiCuePointEvent(
 }
 
 /**
- * type guard for a MidiCopyrightNoticeEvent object
+ * @name isMidiCopyrightNoticeEvent
+ * @description type guard for a MidiCopyrightNoticeEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiCopyrightNoticeEvent(
   event: Partial<MidiEvent>,
@@ -244,7 +313,10 @@ export function isMidiCopyrightNoticeEvent(
 }
 
 /**
- * type guard for a MidiControlChangeEvent object
+ * @name isMidiControlChangeEvent
+ * @description type guard for a MidiControlChangeEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiControlChangeEvent(
   event: Partial<MidiEvent>,
@@ -253,7 +325,10 @@ export function isMidiControlChangeEvent(
 }
 
 /**
- * type guard for a MidiChannelPressureEvent object
+ * @name isMidiChannelPressureEvent
+ * @description type guard for a MidiChannelPressureEvent object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiChannelPressureEvent(
   event: Partial<MidiEvent>,
@@ -262,7 +337,10 @@ export function isMidiChannelPressureEvent(
 }
 
 /**
- * type guard for a MidiChannelPrefixEvent object
+ * @name isMidiChannelPrefixEvent
+ * @description type guard for a MidiChannelPrefix event object
+ * @param {Partial<MidiEvent>} event
+ * @returns {boolean}
  */
 export function isMidiChannelPrefixEvent(
   event: Partial<MidiEvent>,

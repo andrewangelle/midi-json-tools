@@ -8,9 +8,17 @@ import { createEncodeMidiMetaEventWithText } from './utils/encode-midi-meta-even
 import { joinArrayBuffers } from './utils/join-array-buffers';
 import { createWriteVariableLengthQuantity } from './utils/write-variable-length-quantity';
 
+/**
+ * @name writeVariableLengthQuantity
+ * @description Writes the length of the array buffer
+ */
 export const writeVariableLengthQuantity: WriteVariableLengthQuantityFunction =
   createWriteVariableLengthQuantity(createArrayBufferWithDataView);
 
+/**
+ * @name encodeMidiEvent
+ * @description Handles encodes the given event originating from a given midi track
+ */
 export const encodeMidiEvent: EncodeMidiEventFunction = createEncodeMidiEvent(
   createArrayBufferWithDataView,
   createEncodeMidiMetaEventWithText(

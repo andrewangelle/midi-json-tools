@@ -1,7 +1,8 @@
 import type { EncodeMidiMetaEventWithTextFactory } from '../types';
 
 /**
- * This is a factory function for EncodeMidiMetaEventWithTextFunction
+ * @name createEncodeMidiMetaEventWithText
+ * @description This is a factory function for EncodeMidiMetaEventWithTextFunction
  */
 export const createEncodeMidiMetaEventWithText: EncodeMidiMetaEventWithTextFactory =
   (

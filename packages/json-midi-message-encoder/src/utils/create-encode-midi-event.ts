@@ -29,7 +29,8 @@ import {
 } from './guards';
 
 /**
- * Factory function for EncodeMidiEventFunction
+ * @name createEncodeMidiEvent
+ * @description Factory function for EncodeMidiEventFunction
  */
 export const createEncodeMidiEvent: EncodeMidiEventFactory = (
   createArrayBufferWithDataView,
