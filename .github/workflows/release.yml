@@ -18,6 +18,8 @@ jobs:
     name: changesets_release
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.output_published.outputs.PUBLISHED }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -43,6 +45,37 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Output Published Var
+        id: output_published
+        run: |
+          echo "PUBLISHED=${{ steps.changesets.outputs.published }}" >> $GITHUB_OUTPUT
+
+  release-jsr:
+    needs: [release]
+    runs-on: ubuntu-latest
+    if: needs.release.outputs.published == 'true'
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Install OIDC Client from Core Package
+      run: npm install @actions/core@1.6.0 @actions/http-client
+
+    - name: Get Id Token
+      uses: actions/github-script@v6
+      id: idtoken
+      with:
+        script: |
+          const core = require('@actions/core')
+          let id_token = await core.getIDToken()
+          coredemo.setOutput('id_token', id_token)
       - name: Publish to JSR
-        if: steps.changesets.outputs.published == 'true'
-        run: cd ./packages/json-to-midi && npx jsr publish && cd ../midi-to-json && npx jsr publish && cd ../json-midi-message-encoder && npx jsr publish
+        run: cd ./packages/json-to-midi && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../midi-to-json && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../json-midi-message-encoder && npx jsr publish --token=${{ steps.idtoken.id_token }}
