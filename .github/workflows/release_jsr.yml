@@ -1,0 +1,38 @@
+name: JSR Release
+
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+  HUSKY: 0
+
+jobs:
+  release-jsr:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Install OIDC Client from Core Package
+      run: npm install @actions/core@1.6.0 @actions/http-client
+
+    - name: Get Id Token
+      uses: actions/github-script@v6
+      id: idtoken
+      with:
+        script: |
+          const actions_core = require('@actions/core')
+          let id_token = await actions_core.getIDToken()
+          actions_core.setOutput('id_token', id_token)
+
+    - name: Publish to JSR
+      run: cd ./packages/json-to-midi && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../midi-to-json && npx jsr publish --token=${{ steps.idtoken.id_token }} && cd ../json-midi-message-encoder && npx jsr publish --token=${{ steps.idtoken.id_token }}
