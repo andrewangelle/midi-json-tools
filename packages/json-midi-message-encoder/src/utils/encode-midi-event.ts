@@ -28,6 +28,9 @@ import {
   isMidiUnknownTextEvent,
 } from './guards';
 
+/**
+ * Factory function for EncodeMidiEventFunction
+ */
 export const createEncodeMidiEvent: EncodeMidiEventFactory = (
   createArrayBufferWithDataView,
   encodeMidiMetaEventWithText,
