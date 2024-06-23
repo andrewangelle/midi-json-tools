@@ -5,7 +5,12 @@ import { parseSysexEvent } from './parse-sysex-event';
 import { readVariableLengthQuantity } from './read-variable-length-quantity';
 
 /**
- * This function handles deciding how to parse the given midi event from a midi track
+ * @name parseEvent
+ * @description This function handles deciding how to parse the given midi event from a midi track
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @param {null | number} lastStatusByte
+ * @returns {object}
  */
 export function parseEvent(
   dataView: DataView,

@@ -12,7 +12,13 @@ import type {
 import { hexifyNumber } from './hexify-number';
 
 /**
- * This function handles parsing the event information for an event of a given midi track
+ * @name parseMidiEvent
+ * @description This function handles parsing the event information for an event of a given midi track
+ * @param {number} statusByte
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @param {null | number} lastStatusByte
+ * @returns {object}
  */
 export function parseMidiEvent(
   statusByte: number,

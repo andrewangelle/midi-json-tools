@@ -1,9 +1,16 @@
 import { stringify } from './stringify';
 
 /**
- * This function handles parsing the header information for a midi file
+ * @name parseHeaderChunk
+ * @description This function handles parsing the header information for a midi file
+ * @param {DataView} dataView
+ * @returns {Record<string, number>}
  */
-export function parseHeaderChunk(dataView: DataView) {
+export function parseHeaderChunk(dataView: DataView): {
+  division: number;
+  format: number;
+  numberOfTracks: number;
+} {
   if (dataView.byteLength < 14) {
     throw new Error(
       `Expected at least 14 bytes instead of ${dataView.byteLength}`,

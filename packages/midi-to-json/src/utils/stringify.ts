@@ -1,11 +1,16 @@
 /**
- * This function turns a part of a given ArrayBuffer into a String.
+ * @name stringify
+ * @description This function turns a part of a given ArrayBuffer into a String.
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @param {number} length
+ * @returns {string}
  */
-export const stringify = (
+export function stringify(
   dataView: DataView,
   offset = 0,
   length = dataView.byteLength - (offset - dataView.byteOffset),
-) => {
+) {
   const byteOffset = offset + dataView.byteOffset;
 
   const array = new Uint8Array(dataView.buffer, byteOffset, length);
@@ -15,4 +20,4 @@ export const stringify = (
     null,
     <number[]>(<unknown>(<Uint8Array>array)),
   );
-};
+}
