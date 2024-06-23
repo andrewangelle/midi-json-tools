@@ -1,7 +1,10 @@
 import type { MidiEvent, MidiStatusEvent } from '../types';
 
 /**
- * type guard for a MidiStatusEvent object
+ * @name isMidiStatusEvent
+ * @description type guard for a MidiStatusEvent object
+ * @param {Partial<MidiEvent>} midiEvent
+ * @returns {boolean}
  */
 export function isMidiStatusEvent(
   midiEvent: Partial<MidiEvent>,

@@ -1,13 +1,18 @@
 import { hexifyNumber } from './hexify-number';
 
 /**
- * This function turns a part of a given ArrayBuffer into a hexadecimal String.
+ * @name hexify
+ * @description This function turns a part of a given ArrayBuffer into a hexadecimal String.
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @param {number} length
+ * @returns {string}
  */
-export const hexify = (
+export function hexify(
   dataView: DataView,
   offset = 0,
   length = dataView.byteLength - (offset - dataView.byteOffset),
-) => {
+): string {
   const byteOffset = offset + dataView.byteOffset;
 
   const hexArray = [];
@@ -19,4 +24,4 @@ export const hexify = (
   }
 
   return hexArray.join('');
-};
+}

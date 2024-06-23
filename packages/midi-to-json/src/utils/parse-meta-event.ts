@@ -25,7 +25,11 @@ import { readVariableLengthQuantity } from './read-variable-length-quantity';
 import { stringify } from './stringify';
 
 /**
- * This function handles parsing the meta information for a midi event
+ * @name parseMetaEvent
+ * @description This function handles parsing the meta information for a midi event
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @returns {object}
  */
 export function parseMetaEvent(
   dataView: DataView,

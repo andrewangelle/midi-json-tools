@@ -1,11 +1,22 @@
+import type { MidiMetaEvent } from '../types';
 import { isMidiStatusEvent } from './is-midi-status-event';
 import { parseEvent } from './parse-event';
 import { stringify } from './stringify';
 
 /**
- * This function handles parsing the given track from a midi file
+ * @name parseTrackChunk
+ * @description This function handles parsing the given track from a midi file
+ * @param {DataView} dataView
+ * @param {number} offset
+ * @returns {object}
  */
-export function parseTrackChunk(dataView: DataView, offset: number) {
+export function parseTrackChunk(
+  dataView: DataView,
+  offset: number,
+): {
+  offset: number;
+  track: MidiMetaEvent[];
+} {
   if (stringify(dataView, offset, 4) !== 'MTrk') {
     throw new Error(
       `Unexpected characters "${stringify(dataView, offset, 4)}" found instead of "MTrk"`,
