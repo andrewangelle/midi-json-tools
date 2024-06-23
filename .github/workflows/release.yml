@@ -69,5 +69,8 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
+    - name: Run production build
+      run: npm run build
+
     - name: Publish to JSR
       run: cd ./packages/json-to-midi && npx jsr publish && cd ../midi-to-json && npx jsr publish && cd ../json-midi-message-encoder && npx jsr publish
