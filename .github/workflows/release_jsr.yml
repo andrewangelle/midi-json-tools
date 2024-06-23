@@ -14,5 +14,16 @@ jobs:
       contents: read
       id-token: write # The OIDC ID token is used for authentication with JSR.    
     steps:
-      - uses: actions/checkout@v4
-      - run: npx jsr publish
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js 20.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.x
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Publish to JSR
+      run: cd ./packages/json-to-midi && npx jsr publish && cd ../midi-to-json && npx jsr publish && cd ../json-midi-message-encoder && npx jsr publish
