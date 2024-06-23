@@ -1,5 +1,8 @@
 import type { WriteVariableLengthQuantityFactory } from '../types';
 
+/**
+ * Factory function for WriteVariableLengthQuantityFunction
+ */
 export const createWriteVariableLengthQuantity: WriteVariableLengthQuantityFactory =
   (createArrayBufferWithDataView) => {
     return (value) => {
