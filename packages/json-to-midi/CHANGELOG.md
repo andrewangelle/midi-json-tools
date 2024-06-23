@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 1.0.5
+
+### Patch Changes
+
+- 6c354bb: Adding jsr config, Adding symbol information to utils
+- Updated dependencies [6c354bb]
+  - @midi-json-tools/json-midi-message-encoder@1.0.5
+
 ## 1.0.4
 
 ### Patch Changes
