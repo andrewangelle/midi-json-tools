@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/json-to-midi",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/json-to-midi/README.md",
@@ -14,9 +14,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "npx vite build",
     "format": "npx biome format . --write",
@@ -24,9 +22,9 @@
     "test": "npx vitest"
   },
   "dependencies": {
-    "@midi-json-tools/json-midi-message-encoder": "^1.0.5"
+    "@midi-json-tools/json-midi-message-encoder": "^1.0.6"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "^1.0.5"
+    "@midi-json-tools/midi-to-json": "^1.0.6"
   }
 }

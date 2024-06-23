@@ -1,5 +1,11 @@
 # @midi-json-tools/json-midi-message-encoder
 
+## 1.0.6
+
+### Patch Changes
+
+- 61730ff: Testing JSR Publish
+
 ## 1.0.5
 
 ### Patch Changes
