@@ -2,6 +2,7 @@
 
 .npmrc
 **/*/dist
+examples/node/package-lock.json
 
 .turbo
 
