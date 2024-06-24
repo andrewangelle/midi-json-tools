@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.0.9
+
+### Patch Changes
+
+- 33652f2: Adding in comments to exported type symbols
+
 ## 1.0.8
 
 ### Patch Changes
