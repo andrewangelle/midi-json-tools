@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-read --allow-write ./src/main.ts",
+    "run": "deno run --allow-read --allow-write ./src/main.ts",
+    "test": "deno test ./test --allow-read"
+  },
+  "imports": {
+    "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^1.0.8",
+    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^1.0.8"
+  }
+}
