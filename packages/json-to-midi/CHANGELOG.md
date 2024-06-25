@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 1.0.9
+
+### Patch Changes
+
+- 5e2bc05: Updating dependency
+- Updated dependencies [804fe76]
+  - @midi-json-tools/json-midi-message-encoder@1.0.9
+
 ## 1.0.8
 
 ### Patch Changes
