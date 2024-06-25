@@ -1,5 +1,11 @@
 # @midi-json-tools/json-midi-message-encoder
 
+## 1.0.9
+
+### Patch Changes
+
+- 804fe76: Add symbols to exports
+
 ## 1.0.8
 
 ### Patch Changes
