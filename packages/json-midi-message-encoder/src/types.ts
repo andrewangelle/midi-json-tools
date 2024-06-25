@@ -1,11 +1,17 @@
 import type { TextEncoder } from 'node:util';
 import type { MidiEvent, MidiMetaEvent } from '@midi-json-tools/midi-to-json';
 
+/**
+ * Type def for CreateArrayBufferWithDataViewFunction
+ */
 export type CreateArrayBufferWithDataViewFunction = (length: number) => {
   arrayBuffer: ArrayBuffer;
   dataView: DataView;
 };
 
+/**
+ * Type def for EncodeMidiEventFactory
+ */
 export type EncodeMidiEventFactory = (
   createArrayBufferWithDataView: CreateArrayBufferWithDataViewFunction,
   encodeMidiMetaEventWithText: EncodeMidiMetaEventWithTextFunction,
@@ -13,10 +19,16 @@ export type EncodeMidiEventFactory = (
   writeVariableLengthQuantity: WriteVariableLengthQuantityFunction,
 ) => EncodeMidiEventFunction;
 
+/**
+ * Type def for EncodeMidiEventFunction
+ */
 export type EncodeMidiEventFunction = (
   event: Partial<MidiEvent>,
 ) => ArrayBuffer;
 
+/**
+ * Type def for EncodeMidiMetaEventWithTextFactory
+ */
 export type EncodeMidiMetaEventWithTextFactory = (
   createArrayBufferWithDataView: CreateArrayBufferWithDataViewFunction,
   joinArrayBuffers: JoinArrayBuffersFunction,
@@ -24,6 +36,9 @@ export type EncodeMidiMetaEventWithTextFactory = (
   writeVariableLengthQuantity: WriteVariableLengthQuantityFunction,
 ) => EncodeMidiMetaEventWithTextFunction;
 
+/**
+ * Type def for EncodeMidiMetaEventWithTextFunction
+ */
 export type EncodeMidiMetaEventWithTextFunction = <
   MidiMetaEventExtended extends MidiMetaEvent & {
     [Key in MidiMetaEventExtendedKey]: string;
@@ -35,14 +50,23 @@ export type EncodeMidiMetaEventWithTextFunction = <
   key: MidiMetaEventExtendedKey,
 ) => ArrayBuffer;
 
+/**
+ * Type def for JoinArrayBuffersFunction
+ */
 export type JoinArrayBuffersFunction = (
   arrayBuffers: ArrayBuffer[],
 ) => ArrayBuffer;
 
+/**
+ * Type def for WriteVariableLengthQuantityFactory
+ */
 export type WriteVariableLengthQuantityFactory = (
   createArrayBufferWithDataView: CreateArrayBufferWithDataViewFunction,
 ) => WriteVariableLengthQuantityFunction;
 
+/**
+ * Type def for WriteVariableLengthQuantityFunction
+ */
 export type WriteVariableLengthQuantityFunction = (
   value: number,
 ) => ArrayBuffer;
