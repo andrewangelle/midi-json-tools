@@ -11,6 +11,7 @@
   "bugs": {
     "url": "https://github.com/andrewangelle/midi-json-tools/issues"
   },
+  "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
