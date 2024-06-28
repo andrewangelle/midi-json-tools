@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.1.0
+
+### Minor Changes
+
+- 544f7cf: Add MIT license. Export type guards from message encoder
+
 ## 1.0.9
 
 ### Patch Changes
