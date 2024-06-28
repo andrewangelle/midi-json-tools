@@ -1,77 +1,88 @@
-import { writeFile } from 'node:fs/promises';
-import * as path from 'node:path';
-import * as url from 'node:url';
-import jsonToMidiPackageJson from '../packages/json-to-midi/package.json' with { type: 'json' };
-import midiToJsonPackageJson from '../packages/midi-to-json/package.json' with { type: 'json' };
-import messageEncoderPackageJson from '../packages/json-midi-message-encoder/package.json' with { type: 'json' };
+import { writeFile, readFile, opendir } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import jsonToMidiJSRJson from '../packages/json-to-midi/jsr.json' with { type: 'json' };
-import midiToJsonJSRJson from '../packages/midi-to-json/jsr.json' with { type: 'json' };
-import messageEncoderJSRJson from '../packages/json-midi-message-encoder/jsr.json' with { type: 'json' };
+/**
+ * @typedef {Record<'jsrJsonVersion' | 'jsrJsonPath' | 'packageJsonVersion' | 'name', string>} PackageInfo
+ */
 
-const packages = [
-  'jsonToMidi',
-  'midiToJson',
-  'messageEncoder'
-];
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const packagesDirectory = join(__dirname, '../packages');
 
-const config = {
-  versions: {
-    packageJson: {
-      jsonToMidi: jsonToMidiPackageJson.version,
-      midiToJson: midiToJsonPackageJson.version,
-      messageEncoder: messageEncoderPackageJson.version
-    },
-    jsrJson: {
-      jsonToMidi: jsonToMidiJSRJson.version,
-      midiToJson: midiToJsonJSRJson.version,
-      messageEncoder: messageEncoderJSRJson.version
+
+/**
+ * Compare the jsr.json versions with the package.json versions.
+ * Update the jsr.json to match package.json if they differ.
+ */
+for(
+  const { packageJsonVersion, jsrJsonVersion, jsrJsonPath } 
+  of 
+  await getPackageInfo()
+){
+
+  if(packageJsonVersion !== jsrJsonVersion){
+    const jsrJson = await readFile(jsrJsonPath, 'utf-8');
+
+    const updated = {
+      ...JSON.parse(jsrJson),
+      version: packageJsonVersion
     }
-  },
-  paths: {
-    jsr: {
-      jsonToMidi: '../packages/json-to-midi/jsr.json',
-      midiToJson: '../packages/midi-to-json/jsr.json',
-      messageEncoder: '../packages/json-midi-message-encoder/jsr.json'
-    }
+
+    await writeFile(jsrJsonPath, JSON.stringify(updated))
   }
 }
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+/**
+ * Walk the packages directory returning the paths for each package.json and jsr.json
+ * 
+ * @generator walk
+ * @param {string} directoryPath
+ * @yields {string}
+ */
+async function* walk(directoryPath) {
+  for await (const target of await opendir(directoryPath)) {
+    const entry =  join(directoryPath, target.name);
+    const isFileMatch = target.isFile() && /(package\.json|jsr\.json)/.test(entry);
 
-for (const packageName of packages){
-  let updated;
+    if (target.isDirectory()) yield* walk(entry); 
+    else if (isFileMatch) yield entry;
+  }
+}
 
-  const jsrConfigPath = config.paths.jsr[packageName];
-  const packageJsonVersion = config.versions.packageJson[packageName];
-  const jsrJsonVersion = config.versions.jsrJson[packageName]
+/**
+ * Extract the version numbers for each package and return the path to the jsr json file
+ * 
+ * @returns {Promise<PackageInfo[]>}
+ */
+async function getPackageInfo() {
+  const packageInfo = {}
 
-  if(packageJsonVersion !== jsrJsonVersion) {
-    if(packageName === 'jsonToMidi') {
-      updated = {
-        ...jsonToMidiJSRJson,
-        version: packageJsonVersion
+  for await (const filePath of walk(packagesDirectory)) {
+    const result = await readFile(filePath, 'utf-8')
+    const { name, version } = JSON.parse(result)
+
+    if(!packageInfo[name]){
+      packageInfo[name] = {
+        packageJsonVersion: '',
+        jsrJsonVersion: '',
+        jsrJsonPath: ''
       }
     }
-  
-    if(packageName === 'midiToJson') {
-      updated = {
-        ...midiToJsonJSRJson,
-        version: packageJsonVersion
-      }
-    }
-  
-    if(packageName === 'messageEncoder') {
-      updated = {
-        ...messageEncoderJSRJson,
-        version: packageJsonVersion
-      }
-    }
-    const filePath = path.join(__dirname, jsrConfigPath);
 
-    await writeFile(filePath, JSON.stringify(updated))
+    if(/(package\.json)/.test(filePath)) {
+      packageInfo[name].packageJsonVersion = version
+    }
+
+    if(/(jsr\.json)/.test(filePath)) {
+      packageInfo[name].jsrJsonVersion = version
+      packageInfo[name].jsrJsonPath = filePath
+    }
   }
 
+  return Object
+    .entries(packageInfo)
+    .map(([name, value]) => ({...value, name }))
 }
+
 
 
