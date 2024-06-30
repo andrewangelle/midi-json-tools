@@ -6,26 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": [] 
     },
-    "json-to-midi#build": {
+    "test": {
       "cache": true,
-      "outputs": [
-        "packages/json-to-midi/dist/**"
-      ],
-      "dependsOn": ["json-midi-message-encoder#build", "build"]
-    },
-    "midi-to-json#build": {
-      "cache": true,
-      "outputs": [
-        "packages/midi-to-json/dist/**"
-      ],
-      "dependsOn": ["json-midi-message-encoder#build", "build"]
-    },
-    "json-midi-message-encoder#build": {
-      "cache": true,
-      "outputs": [
-        "packages/json-midi-message-encoder/dist/**"
-      ],
-      "dependsOn": ["build"]
+      "outputs": [],
+      "dependsOn": ["^build", "^test"] 
     },
     "format": {
       "cache": false,
@@ -35,40 +19,56 @@
       "cache": false,
       "dependsOn": ["^lint"]
     },
-    "json-to-midi#lint": {
+    "@midi-json-tools/json-to-midi#build": {
+      "cache": true,
+      "outputs": [
+        "packages/json-to-midi/dist/**"
+      ],
+      "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
+    },
+    "@midi-json-tools/json-to-midi#lint": {
       "cache": true,
       "outputs": [],
       "dependsOn": []
     },
-    "midi-to-json#lint": {
+    "@midi-json-tools/json-to-midi#test": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["build"]
+    },
+    "@midi-json-tools/midi-to-json#build": {
+      "cache": true,
+      "outputs": [
+        "packages/midi-to-json/dist/**"
+      ],
+      "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
+    },
+    "@midi-json-tools/midi-to-json#lint": {
       "cache": true,
       "outputs": [],
       "dependsOn": []
     },
-    "json-midi-message-encoder#lint": {
+    "@midi-json-tools/midi-to-json#test": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["build"]
+    },
+    "@midi-json-tools/json-midi-message-encoder#build": {
+      "cache": true,
+      "outputs": [
+        "packages/json-midi-message-encoder/dist/**"
+      ],
+      "dependsOn": []
+    },
+    "@midi-json-tools/json-midi-message-encoder#lint": {
       "cache": true,
       "outputs": [],
       "dependsOn": []
     },
-    "test": {
+    "@midi-json-tools/json-midi-message-encoder#test": {
       "cache": true,
       "outputs": [],
-      "dependsOn": ["^build", "^test"] 
-    },
-    "json-to-midi#test": {
-      "cache": true,
-      "outputs": [],
-      "dependsOn": ["test", "build"]
-    },
-    "midi-to-json#test": {
-      "cache": true,
-      "outputs": [ ],
-      "dependsOn": ["test", "build"]
-    },
-    "json-midi-message-encoder#test": {
-      "cache": true,
-      "outputs": [],
-      "dependsOn": ["test", "build"]
+      "dependsOn": ["build"]
     }
   }
 }
