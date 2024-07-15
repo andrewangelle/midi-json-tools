@@ -1,0 +1,11 @@
+/*!
+ * midi-json-parser <https://github.com/chrisguttandin/midi-json-parser>
+ * midi-json-parser-worker <https://github.com/chrisguttandin/midi-json-parser-worker>
+ * worker-factor <https://github.com/chrisguttandin/worker-factory>
+ * json-midi-message-encoder <https://github.com/chrisguttandin/json-midi-message-encoder>
+ * json-midi-encoder-worker <https://github.com/chrisguttandin/json-midi-encoder-worker>
+ * json-midi-encoder <https://github.com/chrisguttandin/json-midi-encoder>
+ *
+ * Copyright (c) 2024, Christoph Guttandin.
+ * Released under the MIT License.
+ */
