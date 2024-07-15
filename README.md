@@ -68,11 +68,6 @@ const midiFile = await jsonToMidi(json);
 ## Scripts
 
 ```sh
-$ npm run examples
-```
-  - Then see `./examples/example-output` for the result 
-
-```sh
 $ npm run build
 ```
 
@@ -86,4 +81,8 @@ $ npm run lint
 
 ```sh
 $ npm run format
+```
+
+```sh
+$ npm run test
 ```
