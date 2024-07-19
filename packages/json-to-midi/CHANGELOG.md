@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 1.1.1
+
+### Patch Changes
+
+- 882c78a: Adding third party license info
+- Updated dependencies [882c78a]
+  - @midi-json-tools/json-midi-message-encoder@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
