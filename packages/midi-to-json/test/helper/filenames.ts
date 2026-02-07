@@ -4,6 +4,7 @@ export const filenames = [
   'A_F_NO7_01',
   'MIDIOkFormat1-lyrics',
   'MIDIOkFormat2',
+  'albcant',
   'MorozovS07',
   'SubTractor 1',
   'SubTractor 2',
