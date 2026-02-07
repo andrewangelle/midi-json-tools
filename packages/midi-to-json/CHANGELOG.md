@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 1.1.2
+
+### Patch Changes
+
+- 5d92ec7: Issue #25 Fix incorrect charset
+
 ## 1.1.1
 
 ### Patch Changes
