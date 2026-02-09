@@ -22,7 +22,7 @@
     "@midi-json-tools/json-to-midi#build": {
       "cache": true,
       "outputs": [
-        "packages/json-to-midi/dist/**"
+        "packages/json-to-midi/dist"
       ],
       "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
     },
@@ -39,7 +39,7 @@
     "@midi-json-tools/midi-to-json#build": {
       "cache": true,
       "outputs": [
-        "packages/midi-to-json/dist/**"
+        "packages/midi-to-json/dist"
       ],
       "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
     },
@@ -56,7 +56,7 @@
     "@midi-json-tools/json-midi-message-encoder#build": {
       "cache": true,
       "outputs": [
-        "packages/json-midi-message-encoder/dist/**"
+        "packages/json-midi-message-encoder/dist"
       ],
       "dependsOn": []
     },
