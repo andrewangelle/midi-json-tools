@@ -30,18 +30,5 @@ export default defineConfig({
     rollupOptions: {
       external: ['node:worker_threads', 'node:events'],
     },
-  },
-
-  test: {
-    watch: false,
-    globals: true,
-    environment: 'node',
-    include: ['test/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-
-    reporters: ['default'],
-    coverage: {
-      reportsDirectory: '../../coverage/packages/json-midi-message-encoder',
-      provider: 'v8',
-    },
-  },
+  }
 });

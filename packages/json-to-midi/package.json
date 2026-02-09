@@ -23,9 +23,9 @@
     "test": "npx vitest"
   },
   "dependencies": {
-    "@midi-json-tools/json-midi-message-encoder": "^1.1.1"
+    "@midi-json-tools/json-midi-message-encoder": "workspace:*"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "^1.1.1"
+    "@midi-json-tools/midi-to-json": "workspace:*"
   }
 }
