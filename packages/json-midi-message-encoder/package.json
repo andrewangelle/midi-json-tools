@@ -17,10 +17,11 @@
   "typings": "./dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-    "build": "npx vite build",
-    "format": "npx biome format . --write",
-    "lint": "npx biome check . --write",
-    "test": "npx vitest"
+    "build": "pnpm clean && pnpm exec vite build",
+    "clean": "pnpx rimraf dist",
+    "format": "pnpm exec biome format . --write",
+    "lint": "pnpm exec biome check . --write",
+    "test": "pnpm exec vitest"
   },
   "dependencies": {}
 }

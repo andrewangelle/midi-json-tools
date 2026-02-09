@@ -11,21 +11,21 @@ We have a quick list of common questions to get you started engaging with this p
 ## Steps
 
 ```
-$ npx changeset
+$ pnpm exec changeset
 ```
 Walk through the prompts, then...
 
 ```
-$ npx changeset version
+$ pnpm exec changeset version
 ```
 Commit the result, then...
 
 ```
-$ npm run build
+$ pnpm build
 ```
 then...
 ```
-$ npx changeset publish 
+$ pnpm exec changeset publish 
 ```
 Put in otp, then...
 
