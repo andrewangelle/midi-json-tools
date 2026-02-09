@@ -68,21 +68,21 @@ const midiFile = await jsonToMidi(json);
 ## Scripts
 
 ```sh
-$ npm run build
+$ pnpm build
 ```
 
 ```sh
-$ npm run test
+$ pnpm test
 ```
 
 ```sh
-$ npm run lint
+$ pnpm lint
 ```
 
 ```sh
-$ npm run format
+$ pnpm format
 ```
 
 ```sh
-$ npm run test
+$ pnpm test
 ```

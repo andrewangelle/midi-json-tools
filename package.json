@@ -1,9 +1,6 @@
 {
   "name": "midi-json-tools",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "license": "MIT",
   "scripts": {
     "test": "turbo run test",
@@ -12,8 +9,8 @@
     "build": "turbo run build",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "ci:publish": "npm run build && npx changeset publish",
-    "ci:version": "npx changeset version && node ./scripts/versionJSR.mjs && npm i && npx biome format packages --write"
+    "ci:publish": "pnpm build && pnpm exec changeset publish",
+    "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm install && pnpm exec biome format packages --write"
   },
   "husky": {
     "hooks": {
@@ -22,8 +19,8 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "npx biome check packages --write",
-      "npx biome format packages --write"
+      "pnpm exec biome check packages --write",
+      "pnpm exec biome format packages --write"
     ]
   },
   "devDependencies": {
@@ -42,5 +39,5 @@
   "dependencies": {
     "@changesets/cli": "^2.27.5"
   },
-  "packageManager": "npm@10.0.0"
+  "packageManager": "pnpm@9.15.5"
 }
