@@ -15,7 +15,7 @@ export function jsonToMidi({
 
   try {
     arrayBuffers.push(encodeHeaderChunk(division, format, tracks));
-  } catch (err) {
+  } catch {
     throw new Error('The given JSON object seems to be invalid.');
   }
 

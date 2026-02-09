@@ -13,16 +13,15 @@ test.each(filenames)('should parse the midi file for %s', async (filename) => {
   expect(midiFile).to.deep.equal(json);
 });
 
-test.each(filenames)(
-  'should refuse to parse the json file  for %s',
-  async (filename) => {
-    const arrayBuffer = await loadFixtureAsArrayBuffer(`${filename}.json`);
-    try {
-      midiToJson(arrayBuffer);
-    } catch (err) {
-      expect((err as Error).message).to.equal(
-        'Unexpected characters "{\n  " found instead of "MThd"',
-      );
-    }
-  },
-);
+test.each(
+  filenames,
+)('should refuse to parse the json file  for %s', async (filename) => {
+  const arrayBuffer = await loadFixtureAsArrayBuffer(`${filename}.json`);
+  try {
+    midiToJson(arrayBuffer);
+  } catch (err) {
+    expect((err as Error).message).to.equal(
+      'Unexpected characters "{\n  " found instead of "MThd"',
+    );
+  }
+});

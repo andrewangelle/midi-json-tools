@@ -1,33 +1,47 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.3.14/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
-    "ignore": [
-      ".turbo/**/*",
-      "./dist/**/*",
-      "**/test/fixtures/**/*",
-      "**/*/tsconfig.spec.json",
-      "./tsconfig.base.json",
-      "**/dist/**/*"
+    "ignoreUnknown": false,
+    "includes": [
+      "**/src/**/*",
+      "**/test/**/*",
+      "**/tsconfig.base.json",
+      "**/tsconfig.spec.json",
+      "!**/dist/**/*",
+      "!**/.turbo/**/*",
+      "!**/node_modules/**/*",
+      "!**/package-lock.json",
+      "!**/package.json",
+      "!**/test/fixtures/**/*"
     ]
   },
+  "formatter": { "enabled": true, "indentWidth": 2, "indentStyle": "space" },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "style": {
+        "noParameterAssign": "off",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      },
+      "suspicious": { "noAssignInExpressions": "off" }
     }
   },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
-      "trailingCommas": "all"
+      "indentWidth": 2,
+      "indentStyle": "space"
     }
-  },
-  "formatter": {
-    "enabled": true,
-    "indentWidth": 2,
-    "indentStyle": "space"
   }
 }
