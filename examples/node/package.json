@@ -8,7 +8,7 @@
     "example:midi-to-json": "node ./midi-to-json.mjs",
     "example:clean": "rm -rf ./example-output && mkdir ./example-output",
     "format": "pnpm exec biome format . --write",
-    "lint": "pnpm exec biome check . --write" 
+    "lint": "pnpm exec biome check . --write"
   },
   "author": "",
   "license": "MIT",

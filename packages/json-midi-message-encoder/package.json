@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/json-midi-message-encoder",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": "MIT",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
@@ -15,7 +15,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "pnpm clean && pnpm exec vite build",
     "clean": "pnpx rimraf dist",
