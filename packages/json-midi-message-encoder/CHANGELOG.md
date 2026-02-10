@@ -1,5 +1,11 @@
 # @midi-json-tools/json-midi-message-encoder
 
+## 1.2.0
+
+### Minor Changes
+
+- 90dc322: Updating vite, vitest, typescript packages to latest. Migrating package manager to pnpm
+
 ## 1.1.1
 
 ### Patch Changes
