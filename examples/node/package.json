@@ -2,15 +2,18 @@
   "name": "midi-json-tools-node-example",
   "version": "0.0.0",
   "description": "Library usage node example",
+  "private": true,
   "scripts": {
     "example:json-to-midi": "node ./json-to-midi.mjs",
     "example:midi-to-json": "node ./midi-to-json.mjs",
-    "example:clean": "rm -rf ./example-output && mkdir ./example-output"
+    "example:clean": "rm -rf ./example-output && mkdir ./example-output",
+    "format": "pnpm exec biome format . --write",
+    "lint": "pnpm exec biome check . --write" 
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@midi-json-tools/json-to-midi": "^1.0.8",
-    "@midi-json-tools/midi-to-json": "^1.0.8"
+    "@midi-json-tools/json-to-midi": "workspace:*",
+    "@midi-json-tools/midi-to-json": "workspace:*"
   }
 }
