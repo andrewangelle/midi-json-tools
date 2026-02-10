@@ -6,6 +6,7 @@
   },
   "imports": {
     "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^1.0.8",
-    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^1.0.8"
+    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^1.0.8",
+    "@std/cli": "jsr:@std/cli@^1.0.27"
   }
 }

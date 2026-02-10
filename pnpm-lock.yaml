@@ -46,6 +46,15 @@ importers:
         specifier: ^4.0.18
         version: 4.0.18(@types/node@25.2.2)(@vitest/ui@4.0.18)
 
+  examples/node:
+    dependencies:
+      '@midi-json-tools/json-to-midi':
+        specifier: workspace:*
+        version: link:../../packages/json-to-midi
+      '@midi-json-tools/midi-to-json':
+        specifier: workspace:*
+        version: link:../../packages/midi-to-json
+
   packages/json-midi-message-encoder: {}
 
   packages/json-to-midi:

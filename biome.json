@@ -4,6 +4,7 @@
   "files": {
     "ignoreUnknown": false,
     "includes": [
+      "**/examples/**/*.json",
       "**/src/**/*",
       "**/test/**/*",
       "**/tsconfig.base.json",
