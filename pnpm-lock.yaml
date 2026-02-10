@@ -64,7 +64,7 @@ importers:
         version: link:../json-midi-message-encoder
     devDependencies:
       '@midi-json-tools/midi-to-json':
-        specifier: workspace:*
+        specifier: ^1.2.0
         version: link:../midi-to-json
 
   packages/midi-to-json: {}
