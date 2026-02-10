@@ -29,6 +29,6 @@
     "@midi-json-tools/json-midi-message-encoder": "^1.2.0"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "workspace:*"
+    "@midi-json-tools/midi-to-json": "^1.2.0"
   }
 }
