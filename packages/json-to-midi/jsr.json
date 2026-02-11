@@ -1,1 +1,1 @@
-{"$schema":"https://jsr.io/schema/config-file.v1.json","name":"@midi-json-tools/json-to-midi","version":"1.2.0","exports":"./src/index.ts","exclude":["test"]}
+{"$schema":"https://jsr.io/schema/config-file.v1.json","name":"@midi-json-tools/json-to-midi","version":"2.0.0","exports":"./src/index.ts","exclude":["test"]}

@@ -1,5 +1,16 @@
 # @midi-json-tools/json-to-midi
 
+## 2.0.0
+
+### Major Changes
+
+- cce6b34: BREAKING: Migrate to ESM only. Remove support for cjs builds
+
+### Patch Changes
+
+- Updated dependencies [cce6b34]
+  - @midi-json-tools/json-midi-message-encoder@2.0.0
+
 ## 1.2.0
 
 ### Minor Changes
