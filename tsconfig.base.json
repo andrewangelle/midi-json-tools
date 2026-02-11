@@ -1,18 +1,11 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "ESNext",
+    "moduleResolution": "bundler", 
+    "target": "esnext",
     "module": "esnext",
-    "lib": ["es2020"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
+    "lib": ["esnext"],
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
      "@midi-json-tools/json-to-midi": [
@@ -25,6 +18,5 @@
         "packages/midi-to-json/src/index.ts"
       ],
     }
-  },
-  "exclude": ["node_modules", "tmp"]
+  }
 }

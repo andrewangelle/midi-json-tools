@@ -12,23 +12,26 @@
     "url": "https://github.com/andrewangelle/midi-json-tools/issues"
   },
   "license": "MIT",
-  "main": "./dist/index.js",
+  "type": "module",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "typings": "./dist/index.d.ts",
+  "typings": "./dist/index.d.mts",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE.txt"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm exec vite build",
-    "clean": "pnpx rimraf dist",
+    "build": "pnpm exec tsdown",
     "format": "pnpm exec biome format . --write",
     "lint": "pnpm exec biome check . --write",
-    "test": "pnpm exec vitest"
+    "test": "pnpm exec vitest",
+    "test:types": "tsc --noEmit"
   },
   "dependencies": {
-    "@midi-json-tools/json-midi-message-encoder": "^1.2.0"
+    "@midi-json-tools/json-midi-message-encoder": "workspace:*"
   },
   "devDependencies": {
-    "@midi-json-tools/midi-to-json": "^1.2.0"
-  }
+    "@midi-json-tools/midi-to-json": "workspace:*"
+  },
+  "packageManager": "pnpm@9.15.5"
 }

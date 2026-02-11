@@ -5,15 +5,16 @@
     "ignoreUnknown": false,
     "includes": [
       "**/examples/**/*.json",
+      "**/examples/**/*.mjs",
+      "**/examples/**/*.ts",
       "**/src/**/*",
       "**/test/**/*",
-      "**/tsconfig.base.json",
-      "**/tsconfig.spec.json",
+      "**/tsconfig.json",
+      "**/tsdown.config.ts",
       "!**/dist/**/*",
       "!**/.turbo/**/*",
       "!**/node_modules/**/*",
       "!**/package-lock.json",
-      "!**/package.json",
       "!**/test/fixtures/**/*"
     ]
   },
