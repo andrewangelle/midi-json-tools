@@ -30,6 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+        
+      - name: Run Production Build
+        run: pnpm build
 
       - name: Run linter
         run: pnpm lint
@@ -37,5 +40,7 @@ jobs:
       - name: Run Unit Tests
         run: pnpm test
 
-      - name: Run Production Build
-        run: pnpm build
+      - name: Run Types Checks
+        run: pnpm test:types
+
+

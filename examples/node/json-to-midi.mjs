@@ -4,7 +4,6 @@ import * as url from 'node:url';
 // import { jsonToMidi } from '../../packages/json-to-midi/dist/index.mjs';
 import { jsonToMidi } from '@midi-json-tools/json-to-midi';
 
-
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const filename = path.join(__dirname, './TimeMachineAlbumAll.json');
