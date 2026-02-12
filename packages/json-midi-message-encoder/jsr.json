@@ -1,10 +1,8 @@
 {
-  "$schema":"https://jsr.io/schema/config-file.v1.json",
-  "name":"@midi-json-tools/json-midi-message-encoder",
-  "version":"2.0.0",
-  "exports":"./src/index.ts",
-  "exclude":["test"],
-  "publish": {
-    "exclude": ["!dist"]
-  }
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@midi-json-tools/json-midi-message-encoder",
+  "version": "2.0.1",
+  "exports": "./src/index.ts",
+  "exclude": ["test"],
+  "publish": { "exclude": ["!dist"] }
 }
