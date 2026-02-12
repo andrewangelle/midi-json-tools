@@ -1,5 +1,13 @@
 # @midi-json-tools/json-to-midi
 
+## 2.0.1
+
+### Patch Changes
+
+- 51f3b46: Remove changesets fromd dependency to devDependencies
+- Updated dependencies [51f3b46]
+  - @midi-json-tools/json-midi-message-encoder@2.0.1
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @midi-json-tools/midi-to-json
 
+## 2.0.1
+
+### Patch Changes
+
+- 51f3b46: Remove changesets fromd dependency to devDependencies
+
 ## 2.0.0
 
 ### Major Changes
