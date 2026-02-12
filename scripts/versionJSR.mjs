@@ -23,7 +23,7 @@ for(
   if(packageJsonVersion !== jsrJsonVersion){
     const jsrJson = await readFile(jsrJsonPath, 'utf-8');
 
-    const updated = {
+    let updated = {
       ...JSON.parse(jsrJson),
       version: packageJsonVersion
     }
