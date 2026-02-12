@@ -28,6 +28,16 @@ for(
       version: packageJsonVersion
     }
 
+    if(jsrJsonPath.includes('json-to-midi')) {
+      updated = {
+        ...updated,
+        imports: {
+          "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${packageJsonVersion}`,
+          "@midi-json-tools/json-midi-message-encoder": `jsr:@midi-json-tools/json-midi-message-encoder@^${packageJsonVersion}`
+        },
+      }
+    }
+
     await writeFile(jsrJsonPath, JSON.stringify(updated))
   }
 }
