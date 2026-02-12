@@ -11,6 +11,7 @@
       "**/test/**/*",
       "**/tsconfig.json",
       "**/tsdown.config.ts",
+      "**/jsr.json",
       "!**/dist/**/*",
       "!**/.turbo/**/*",
       "!**/node_modules/**/*",
