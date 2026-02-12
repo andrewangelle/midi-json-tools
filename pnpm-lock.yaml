@@ -7,14 +7,13 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@changesets/cli':
-        specifier: ^2.27.5
-        version: 2.29.8(@types/node@25.2.2)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.3.14
         version: 2.3.14
+      '@changesets/cli':
+        specifier: ^2.29.8
+        version: 2.29.8(@types/node@25.2.2)
       '@types/node':
         specifier: ^25.2.2
         version: 25.2.2
