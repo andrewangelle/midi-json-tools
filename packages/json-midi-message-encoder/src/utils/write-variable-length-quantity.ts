@@ -1,4 +1,6 @@
-import type { WriteVariableLengthQuantityFactory } from '../types';
+import type { WriteVariableLengthQuantityFactory } from '~/types';
+
+const { floor, max, log } = Math;
 
 /**
  * @name createWriteVariableLengthQuantity
@@ -7,10 +9,7 @@ import type { WriteVariableLengthQuantityFactory } from '../types';
 export const createWriteVariableLengthQuantity: WriteVariableLengthQuantityFactory =
   (createArrayBufferWithDataView) => {
     return (value) => {
-      const numberOfBytes = Math.max(
-        1,
-        Math.floor(Math.log(value) / Math.log(2) / 7) + 1,
-      );
+      const numberOfBytes = max(1, floor(log(value) / log(2) / 7) + 1);
 
       const { arrayBuffer, dataView } =
         createArrayBufferWithDataView(numberOfBytes);

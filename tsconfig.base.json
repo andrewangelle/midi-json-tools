@@ -1,22 +1,11 @@
 {
   "compilerOptions": {
+    "types": ["vitest/globals", "@types/node"],
     "declaration": false,
     "moduleResolution": "bundler", 
     "target": "esnext",
     "module": "esnext",
     "lib": ["esnext"],
-    "rootDir": ".",
-    "baseUrl": ".",
-    "paths": {
-     "@midi-json-tools/json-to-midi": [
-        "packages/json-to-midi/src/index.ts"
-      ],
-      "@midi-json-tools/json-midi-message-encoder": [
-        "packages/json-midi-message-encoder/src/index.ts"
-      ],
-      "@midi-json-tools/midi-to-json": [
-        "packages/midi-to-json/src/index.ts"
-      ],
-    }
+    "rootDir": "."
   }
 }

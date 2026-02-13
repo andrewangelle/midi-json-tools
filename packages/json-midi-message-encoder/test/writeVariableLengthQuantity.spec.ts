@@ -1,6 +1,6 @@
-import { createArrayBufferWithDataView } from '../src/utils/create-array-buffer-with-data-view';
-import { createWriteVariableLengthQuantity } from '../src/utils/write-variable-length-quantity';
-import { transformBufferToArray } from './utils';
+import { createArrayBufferWithDataView } from '~/utils/create-array-buffer-with-data-view';
+import { createWriteVariableLengthQuantity } from '~/utils/write-variable-length-quantity';
+import { transformBufferToArray } from '~test/utils';
 
 describe('writeVariableLengthQuantity', () => {
   it('should encode a number which fits into a single byte', () => {

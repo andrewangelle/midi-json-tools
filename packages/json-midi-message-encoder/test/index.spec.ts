@@ -1,5 +1,5 @@
-import { encodeMidiEvent } from '../src';
-import { transformBufferToArray } from './utils';
+import { encodeMidiEvent } from '~/encode-midi-event';
+import { transformBufferToArray } from '~test/utils';
 
 describe('encodeMidiEvent', () => {
   it('should encode a channel prefix event', () => {
