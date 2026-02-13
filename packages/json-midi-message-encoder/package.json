@@ -25,7 +25,6 @@
     "build": "pnpm exec tsdown",
     "format": "pnpm exec biome format . --write",
     "lint": "pnpm exec biome check . --write",
-    "test": "pnpm exec vitest",
     "test:types": "tsc --noEmit"
   },
   "dependencies": {},
