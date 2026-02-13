@@ -1,9 +1,9 @@
-import { jsonToMidi } from '../src/index';
-import { filenames } from './utils/filenames';
+import { jsonToMidi } from '~/index';
+import { filenames } from '~test/utils/filenames';
 import {
   loadFixtureAsArrayBuffer,
   loadFixtureAsJson,
-} from './utils/load-fixture';
+} from '~test/utils/load-fixture';
 
 test.each(
   filenames,
