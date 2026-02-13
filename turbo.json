@@ -11,6 +11,16 @@
       "outputs": [],
       "dependsOn": ["^build", "^test"] 
     },
+    "test:types": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["^build"] 
+    },
+    "test:watch": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["^build"] 
+    },
     "format": {
       "cache": false,
       "dependsOn": ["^format"]
@@ -39,6 +49,11 @@
       "outputs": [],
       "dependsOn": []
     },
+    "@midi-json-tools/json-to-midi#test:watch": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
     "@midi-json-tools/midi-to-json#build": {
       "cache": true,
       "outputs": [],
@@ -55,6 +70,11 @@
       "dependsOn": ["build"]
     },
     "@midi-json-tools/midi-to-json#test:types": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["build"]
+    },
+    "@midi-json-tools/midi-to-json#test:watch": {
       "cache": true,
       "outputs": [],
       "dependsOn": ["build"]
@@ -78,6 +98,11 @@
       "cache": true,
       "outputs": [],
       "dependsOn": []
+    },
+    "@midi-json-tools/json-midi-message-encoder#test:watch": {
+      "cache": true,
+      "outputs": [],
+     "dependsOn": ["build"] 
     }
   }
 }
