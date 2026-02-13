@@ -13,7 +13,8 @@
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "ci:publish": "pnpm build && pnpm exec changeset publish",
-    "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm install && pnpm format"
+    "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm update:deno:lock && pnpm install && pnpm format",
+    "update:deno:lock": "cd ./examples/deno && deno install && cd ../../"
   },
   "husky": {
     "hooks": {
