@@ -1,27 +1,29 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@midi-json-tools/json-midi-message-encoder@^1.1.1": "1.1.1",
-    "jsr:@midi-json-tools/json-to-midi@^1.0.8": "1.1.1",
-    "jsr:@midi-json-tools/midi-to-json@^1.0.8": "1.1.2",
+    "jsr:@midi-json-tools/json-midi-message-encoder@^2.0.1": "2.0.1",
+    "jsr:@midi-json-tools/json-to-midi@^2.0.1": "2.0.1",
+    "jsr:@midi-json-tools/midi-to-json@^2.0.1": "2.0.1",
     "jsr:@std/assert@0.226": "0.226.0",
     "jsr:@std/cli@*": "0.224.5",
     "jsr:@std/cli@^1.0.27": "1.0.27",
     "jsr:@std/fmt@^1.0.9": "1.0.9",
-    "jsr:@std/internal@^1.0.12": "1.0.12"
+    "jsr:@std/internal@^1.0.12": "1.0.12",
+    "npm:@types/node@*": "24.2.0"
   },
   "jsr": {
-    "@midi-json-tools/json-midi-message-encoder@1.1.1": {
-      "integrity": "37c58617751d246ff586fdbd1a9bbdc0ce8feebe6f0681d1cae810ea3662a891"
+    "@midi-json-tools/json-midi-message-encoder@2.0.1": {
+      "integrity": "3170c1fd97db62bbf2f3fefc453cf6fc17a26c25192759dceff40af9e938a9c3"
     },
-    "@midi-json-tools/json-to-midi@1.1.1": {
-      "integrity": "a3a8d771d9dc9834bbf551fe692e5fab273d1f6a8b2b8d1a8481fddb067b71a8",
+    "@midi-json-tools/json-to-midi@2.0.1": {
+      "integrity": "c90b4cceaeda7e47b40e18fbb06e5ffa7b38b265cfee1b1224a60eb18286de71",
       "dependencies": [
-        "jsr:@midi-json-tools/json-midi-message-encoder"
+        "jsr:@midi-json-tools/json-midi-message-encoder",
+        "jsr:@midi-json-tools/midi-to-json"
       ]
     },
-    "@midi-json-tools/midi-to-json@1.1.2": {
-      "integrity": "4d219bd39ab6763f59049db6b077253faf9e89a8f714fb653da6b749f67e8c21"
+    "@midi-json-tools/midi-to-json@2.0.1": {
+      "integrity": "621776c295bb3cc2de16864053620eb136f887927ab109d859acbf513db590a9"
     },
     "@std/assert@0.226.0": {
       "integrity": "0dfb5f7c7723c18cec118e080fec76ce15b4c31154b15ad2bd74822603ef75b3"
@@ -46,10 +48,21 @@
       "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
     }
   },
+  "npm": {
+    "@types/node@24.2.0": {
+      "integrity": "sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==",
+      "dependencies": [
+        "undici-types"
+      ]
+    },
+    "undici-types@7.10.0": {
+      "integrity": "sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag=="
+    }
+  },
   "workspace": {
     "dependencies": [
-      "jsr:@midi-json-tools/json-to-midi@^1.0.8",
-      "jsr:@midi-json-tools/midi-to-json@^1.0.8",
+      "jsr:@midi-json-tools/json-to-midi@^2.0.1",
+      "jsr:@midi-json-tools/midi-to-json@^2.0.1",
       "jsr:@std/cli@^1.0.27"
     ]
   }

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const packagesDirectory = join(__dirname, '../packages');
-
+const denoExamplesJsonPath = join(__dirname, '../examples/deno/deno.json')
 
 /**
  * Compare the jsr.json versions with the package.json versions.
@@ -36,9 +36,36 @@ for(
           "@midi-json-tools/json-midi-message-encoder": `jsr:@midi-json-tools/json-midi-message-encoder@^${packageJsonVersion}`
         },
       }
+
+
+      // update /examples/deno/deno.json
+      const denoExamplesJson = await getExamplesDenoJson();
+      await writeFile(denoExamplesJsonPath, JSON.stringify({
+        ...denoExamplesJson,
+        imports: {
+          ...denoExamplesJson.imports,
+          "@midi-json-tools/json-to-midi": `jsr:@midi-json-tools/json-to-midi@^${packageJsonVersion}`, 
+        }
+      }))
     }
 
+   
+    if(jsrJsonPath.includes('midi-to-json')) { 
+      // update /examples/deno/deno.json
+      const denoExamplesJson = await getExamplesDenoJson() 
+
+      await writeFile(denoExamplesJsonPath, JSON.stringify({
+        ...denoExamplesJson,
+        imports: {
+          ...denoExamplesJson.imports,
+          "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${packageJsonVersion}`, 
+        }
+      }))
+    }
+
+
     await writeFile(jsrJsonPath, JSON.stringify(updated))
+ 
   }
 }
 
@@ -92,6 +119,11 @@ async function getPackageInfo() {
   return Object
     .entries(packageInfo)
     .map(([name, value]) => ({...value, name }))
+}
+
+async function getExamplesDenoJson() {
+  const denoExamplesJsonFile  = await readFile(denoExamplesJsonPath, 'utf-8');
+  return JSON.parse(denoExamplesJsonFile);
 }
 
 
