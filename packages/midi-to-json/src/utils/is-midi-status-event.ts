@@ -1,4 +1,4 @@
-import type { MidiEvent, MidiStatusEvent } from '../types';
+import type { MidiEvent, MidiStatusEvent } from '~/types';
 
 /**
  * @name isMidiStatusEvent

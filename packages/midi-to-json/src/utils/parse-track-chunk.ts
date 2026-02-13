@@ -1,7 +1,7 @@
-import type { MidiMetaEvent } from '../types';
-import { isMidiStatusEvent } from './is-midi-status-event';
-import { parseEvent } from './parse-event';
-import { stringify } from './stringify';
+import type { MidiMetaEvent } from '~/types';
+import { isMidiStatusEvent } from '~/utils/is-midi-status-event';
+import { parseEvent } from '~/utils/parse-event';
+import { stringify } from '~/utils/stringify';
 
 /**
  * @name parseTrackChunk

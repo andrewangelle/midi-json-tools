@@ -1,4 +1,4 @@
-import { hexifyNumber } from './hexify-number';
+import { hexifyNumber } from '~/utils/hexify-number';
 
 /**
  * @name hexify

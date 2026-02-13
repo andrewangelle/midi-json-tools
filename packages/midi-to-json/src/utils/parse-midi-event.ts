@@ -8,8 +8,8 @@ import type {
   MidiPitchBendEvent,
   MidiProgramChangeEvent,
   MidiStatusEvent,
-} from '../types';
-import { hexifyNumber } from './hexify-number';
+} from '~/types';
+import { hexifyNumber } from '~/utils/hexify-number';
 
 /**
  * @name parseMidiEvent

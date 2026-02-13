@@ -1,9 +1,9 @@
-import { midiToJson } from '../src';
-import { filenames } from './helper/filenames';
+import { midiToJson } from '~/index';
+import { filenames } from '~test/helper/filenames';
 import {
   loadFixtureAsArrayBuffer,
   loadFixtureAsJson,
-} from './helper/load-fixture';
+} from '~test/helper/load-fixture';
 
 test.each(filenames)('should parse the midi file for %s', async (filename) => {
   const arrayBuffer = await loadFixtureAsArrayBuffer(`${filename}.mid`);
