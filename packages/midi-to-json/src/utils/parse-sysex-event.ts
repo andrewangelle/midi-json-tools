@@ -1,6 +1,6 @@
-import type { MidiSysexEvent } from '../types';
-import { hexify } from './hexify';
-import { readVariableLengthQuantity } from './read-variable-length-quantity';
+import type { MidiSysexEvent } from '~/types';
+import { hexify } from '~/utils/hexify';
+import { readVariableLengthQuantity } from '~/utils/read-variable-length-quantity';
 
 /**
  * @name parseSysexEvent

@@ -18,11 +18,11 @@ import type {
   MidiTimeSignatureEvent,
   MidiTrackNameEvent,
   MidiUnknownTextEvent,
-} from '../types';
-import { hexify } from './hexify';
-import { hexifyNumber } from './hexify-number';
-import { readVariableLengthQuantity } from './read-variable-length-quantity';
-import { stringify } from './stringify';
+} from '~/types';
+import { hexify } from '~/utils/hexify';
+import { hexifyNumber } from '~/utils/hexify-number';
+import { readVariableLengthQuantity } from '~/utils/read-variable-length-quantity';
+import { stringify } from '~/utils/stringify';
 
 /**
  * @name parseMetaEvent

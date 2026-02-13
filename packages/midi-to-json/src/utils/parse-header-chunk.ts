@@ -1,4 +1,4 @@
-import { stringify } from './stringify';
+import { stringify } from '~/utils/stringify';
 
 /**
  * @name parseHeaderChunk

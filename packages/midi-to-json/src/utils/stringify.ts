@@ -12,19 +12,16 @@ export function stringify(
   length = dataView.byteLength - (offset - dataView.byteOffset),
 ) {
   const byteOffset = offset + dataView.byteOffset;
+  const raw = new Uint8Array(dataView.buffer, byteOffset, length);
+  const decoder = new TextDecoder('utf-8');
+  const result = decoder.decode(raw);
 
-  const array = new Uint8Array(dataView.buffer, byteOffset, length);
-
-  // Try UTF-8 first
-  const utf8Decoder = new TextDecoder('utf-8');
-  const utf8Result = utf8Decoder.decode(array);
-
-  // Check for replacement characters that indicate invalid UTF-8 sequences and Fall back to Latin-1 (ISO-8859-1) encoding
-  // This could happen with older MIDI files that use Latin-1 encoding (e.g., copyright symbol © as single byte 0xA9).
-  if (utf8Result.includes('\uFFFD')) {
-    const latin1Decoder = new TextDecoder('iso-8859-1');
-    return latin1Decoder.decode(array);
+  // Check for replacement characters that indicate invalid UTF-8 sequences and fallback to iso-8859-1 (latin-1) encoding
+  // This could happen with older MIDI files (e.g., copyright symbol © as single byte 0xA9).
+  if (result.includes('\uFFFD')) {
+    const fallbackDecoder = new TextDecoder('iso-8859-1');
+    return fallbackDecoder.decode(raw);
   }
 
-  return utf8Result;
+  return result;
 }
