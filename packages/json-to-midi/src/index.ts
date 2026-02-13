@@ -1,7 +1,8 @@
 import type { MidiFile } from '@midi-json-tools/midi-to-json';
-import { encodeHeaderChunk } from './utils/encode-header-chunk';
-import { encodeTrackChunk } from './utils/encode-track-chunk';
-import { joinArrayBuffers } from './utils/join-array-buffers';
+import { encodeHeaderChunk } from '~/utils/encode-header-chunk';
+import { encodeTrackChunk } from '~/utils/encode-track-chunk';
+import { JSONToMidiError } from '~/utils/errors';
+import { joinArrayBuffers } from '~/utils/join-array-buffers';
 
 /**
  * This function takes in a JSON representation of a MIDI file and encodes it to binary
@@ -16,7 +17,7 @@ export function jsonToMidi({
   try {
     arrayBuffers.push(encodeHeaderChunk(division, format, tracks));
   } catch {
-    throw new Error('The given JSON object seems to be invalid.');
+    throw new JSONToMidiError('The given JSON object seems to be invalid.');
   }
 
   for (const track of tracks) {

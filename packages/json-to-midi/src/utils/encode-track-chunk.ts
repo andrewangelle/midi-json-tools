@@ -4,7 +4,7 @@ import {
   writeVariableLengthQuantity,
 } from '@midi-json-tools/json-midi-message-encoder';
 import type { MidiEvent } from '@midi-json-tools/midi-to-json';
-import { joinArrayBuffers } from './join-array-buffers';
+import { joinArrayBuffers } from '~/utils/join-array-buffers';
 
 /**
  * @name encodeTrackChunk
