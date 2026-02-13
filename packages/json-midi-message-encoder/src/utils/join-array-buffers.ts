@@ -1,4 +1,4 @@
-import type { JoinArrayBuffersFunction } from '../types';
+import type { JoinArrayBuffersFunction } from '~/types';
 
 /**
  * @name joinArrayBuffers

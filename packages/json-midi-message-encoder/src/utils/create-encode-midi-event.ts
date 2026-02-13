@@ -1,4 +1,4 @@
-import type { EncodeMidiEventFactory } from '../types';
+import type { EncodeMidiEventFactory } from '~/types';
 import {
   isMidiChannelPrefixEvent,
   isMidiChannelPressureEvent,
@@ -26,7 +26,7 @@ import {
   isMidiTimeSignatureEvent,
   isMidiTrackNameEvent,
   isMidiUnknownTextEvent,
-} from './guards';
+} from '~/utils/guards';
 
 /**
  * @name createEncodeMidiEvent
