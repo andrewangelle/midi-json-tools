@@ -7,13 +7,13 @@
     "test": "pnpm exec vitest run --coverage",
     "test:types": "turbo run test:types",
     "test:watch": "pnpm exec vitest watch",
-    "format": "turbo run format",
-    "lint": "turbo run lint",
+    "format": "pnpm exec biome format . --write",
+    "lint": "pnpm exec biome check . --write",
     "build": "turbo run build",
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "ci:publish": "pnpm build && pnpm exec changeset publish",
-    "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm install && pnpm exec biome format packages --write"
+    "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm install && pnpm format"
   },
   "husky": {
     "hooks": {
@@ -27,7 +27,7 @@
     ]
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.14",
+    "@biomejs/biome": "^2.3.15",
     "@changesets/cli": "^2.29.8",
     "@types/node": "^25.2.2",
     "@vitest/coverage-v8": "^4.0.18",
