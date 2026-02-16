@@ -1,6 +1,5 @@
-import { assertEquals, assertThrows } from 'jsr:@std/assert';
-
 import { midiToJson } from '@midi-json-tools/midi-to-json';
+import { assertEquals, assertThrows } from '@std/assert';
 import { filenames } from './filenames.ts';
 
 async function shouldParseMidiFile(_ctx: Deno.TestContext, filename: string) {
@@ -25,15 +24,9 @@ async function shouldRefuseToParseJsonFile(
 }
 
 for (const filename of filenames) {
-  Deno.test(
-    `should parse the midi file for ${filename}`,
-    { permissions: { read: true } },
-    async (ctx) => await shouldParseMidiFile(ctx, filename),
-  );
+  Deno.test(`should parse the midi file for ${filename}`, async (ctx) =>
+    await shouldParseMidiFile(ctx, filename));
 
-  Deno.test(
-    `should refuse to parse the json file for ${filename}`,
-    { permissions: { read: true } },
-    async (ctx) => await shouldRefuseToParseJsonFile(ctx, filename),
-  );
+  Deno.test(`should refuse to parse the json file for ${filename}`, async (ctx) =>
+    await shouldRefuseToParseJsonFile(ctx, filename));
 }

@@ -1,12 +1,18 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-read --allow-write ./src/main.ts",
-    "run": "deno run --allow-read --allow-write ./src/main.ts",
-    "test": "deno test ./test --allow-read"
+    "dev": "deno run -P --watch ./src/main.ts",
+    "run": "deno run -P ./src/main.ts",
+    "test": "deno test -P ./test"
   },
   "imports": {
     "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^2.0.1",
     "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.0.1",
-    "@std/cli": "jsr:@std/cli@^1.0.27"
+    "@std/cli": "jsr:@std/cli@^1.0.27",
+    "@std/assert": "jsr:@std/assert@^1.0.18"
+  },
+  "permissions": {
+    "default": {
+      "read": ["./test", "./src"]
+    }
   }
 }
