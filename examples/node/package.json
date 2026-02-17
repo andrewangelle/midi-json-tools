@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Library usage node example",
   "private": true,
+  "type": "module",
   "scripts": {
     "example:json-to-midi": "node ./json-to-midi.mjs",
     "example:midi-to-json": "node ./midi-to-json.mjs",

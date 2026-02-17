@@ -1,20 +1,16 @@
-import * as fs from 'node:fs/promises';
-import * as path from 'node:path';
-import * as url from 'node:url';
-// import { jsonToMidi } from '../../packages/json-to-midi/dist/index.mjs';
+import { readFile, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { jsonToMidi } from '@midi-json-tools/json-to-midi';
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-const filename = path.join(__dirname, './TimeMachineAlbumAll.json');
-const response = await fs.readFile(filename);
-const json = JSON.parse(response.toString());
+const filePaths = {
+  midi: join(__dirname, './example-output/TimeMachineAlbumAll.mid'),
+  json: join(__dirname, './TimeMachineAlbumAll.json'),
+};
 
-const midiFile = await jsonToMidi(json);
+const jsonFile = await readFile(filePaths.json, 'utf-8');
+const result = jsonToMidi(JSON.parse(jsonFile));
 
-const outfile = path.join(
-  __dirname,
-  './example-output/TimeMachineAlbumAll.mid',
-);
-
-await fs.writeFile(outfile, new Uint8Array(midiFile));
+await writeFile(filePaths.midi, new Uint8Array(result));
