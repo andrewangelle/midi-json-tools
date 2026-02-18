@@ -14,7 +14,10 @@
     "@midi-json-tools/json-to-midi#build": {
       "cache": true,
       "outputs": [],
-      "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
+      "dependsOn": [
+        "@midi-json-tools/types#build", 
+        "@midi-json-tools/json-midi-message-encoder#build"
+      ]
     },
     "@midi-json-tools/json-to-midi#test:types": {
       "cache": true,
@@ -24,7 +27,10 @@
     "@midi-json-tools/midi-to-json#build": {
       "cache": true,
       "outputs": [],
-      "dependsOn": ["@midi-json-tools/json-midi-message-encoder#build"]
+      "dependsOn": [
+        "@midi-json-tools/types#build",
+        "@midi-json-tools/json-midi-message-encoder#build"
+      ]
     },
     "@midi-json-tools/midi-to-json#test:types": {
       "cache": true,
@@ -34,9 +40,21 @@
     "@midi-json-tools/json-midi-message-encoder#build": {
       "cache": true,
       "outputs": [],
-      "dependsOn": []
+      "dependsOn": [
+        "@midi-json-tools/types#build"
+      ]
     },
     "@midi-json-tools/json-midi-message-encoder#test:types": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "@midi-json-tools/types#build": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "@midi-json-tools/types#test:types": {
       "cache": true,
       "outputs": [],
       "dependsOn": []

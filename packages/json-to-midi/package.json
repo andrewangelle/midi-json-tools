@@ -25,10 +25,8 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
+    "@midi-json-tools/types": "workspace:*",
     "@midi-json-tools/json-midi-message-encoder": "workspace:*"
-  },
-  "devDependencies": {
-    "@midi-json-tools/midi-to-json": "workspace:*"
   },
   "packageManager": "pnpm@9.15.5"
 }

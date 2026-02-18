@@ -1,4 +1,4 @@
-import type { MidiFile } from '@midi-json-tools/midi-to-json';
+import type { MidiFile } from '@midi-json-tools/types';
 import { encodeHeaderChunk } from '~/utils/encode-header-chunk';
 import { encodeTrackChunk } from '~/utils/encode-track-chunk';
 import { JSONToMidiError } from '~/utils/errors';

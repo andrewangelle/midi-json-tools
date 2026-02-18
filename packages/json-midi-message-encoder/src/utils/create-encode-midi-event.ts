@@ -1,4 +1,4 @@
-import type { EncodeMidiEventFactory } from '~/types';
+import type { EncodeMidiEventFactory } from '@midi-json-tools/types';
 import {
   isMidiChannelPrefixEvent,
   isMidiChannelPressureEvent,

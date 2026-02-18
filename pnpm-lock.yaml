@@ -57,19 +57,32 @@ importers:
         specifier: workspace:*
         version: link:../../packages/midi-to-json
 
-  packages/json-midi-message-encoder: {}
+  packages/json-midi-message-encoder:
+    dependencies:
+      '@midi-json-tools/types':
+        specifier: workspace:*
+        version: link:../types
 
   packages/json-to-midi:
     dependencies:
       '@midi-json-tools/json-midi-message-encoder':
         specifier: workspace:*
         version: link:../json-midi-message-encoder
+      '@midi-json-tools/types':
+        specifier: workspace:*
+        version: link:../types
     devDependencies:
       '@midi-json-tools/midi-to-json':
         specifier: workspace:*
         version: link:../midi-to-json
 
-  packages/midi-to-json: {}
+  packages/midi-to-json:
+    dependencies:
+      '@midi-json-tools/types':
+        specifier: workspace:*
+        version: link:../types
+
+  packages/types: {}
 
 packages:
 

@@ -1,7 +1,7 @@
 import type {
   EncodeMidiEventFunction,
   WriteVariableLengthQuantityFunction,
-} from '~/types';
+} from '@midi-json-tools/types';
 import { createArrayBufferWithDataView } from '~/utils/create-array-buffer-with-data-view';
 import { createEncodeMidiEvent } from '~/utils/create-encode-midi-event';
 import { createEncodeMidiMetaEventWithText } from '~/utils/encode-midi-meta-event-with-text';
