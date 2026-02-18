@@ -1,4 +1,4 @@
-import type { CreateArrayBufferWithDataViewFunction } from '~/types';
+import type { CreateArrayBufferWithDataViewFunction } from '@midi-json-tools/types';
 
 /**
  * This function takes in a byte length and instantiates an ArrayBuffer and DataView instance

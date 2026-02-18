@@ -1,8 +1,6 @@
-import type { MidiEvent, MidiFile } from '~/types';
+import type { MidiEvent, MidiFile } from '@midi-json-tools/types';
 import { parseHeaderChunk } from '~/utils/parse-header-chunk';
 import { parseTrackChunk } from '~/utils/parse-track-chunk';
-
-export * from '~/types';
 
 /**
  * @name midiToJson

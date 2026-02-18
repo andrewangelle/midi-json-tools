@@ -1,5 +1,5 @@
 import { createArrayBufferWithDataView } from '@midi-json-tools/json-midi-message-encoder';
-import type { MidiEvent } from '@midi-json-tools/midi-to-json';
+import type { MidiEvent } from '@midi-json-tools/types';
 
 /**
  * @name encodeHeaderChunk
