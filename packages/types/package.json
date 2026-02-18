@@ -1,10 +1,9 @@
 {
-  "name": "@midi-json-tools/json-midi-message-encoder",
-  "version": "2.0.1",
-  "license": "MIT",
+  "name": "@midi-json-tools/types",
+  "version": "0.1.0",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
-  "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/json-midi-message-encoder/README.md",
+  "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/midi-to-json/README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrewangelle/midi-json-tools.git"
@@ -12,11 +11,11 @@
   "bugs": {
     "url": "https://github.com/andrewangelle/midi-json-tools/issues"
   },
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.mts",
-  "test:types": "tsc --noEmit",
   "files": [
     "dist",
     "LICENSE.txt"
@@ -25,8 +24,6 @@
     "build": "pnpm exec tsdown",
     "test:types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@midi-json-tools/types": "workspace:*"
-  },
+  "dependencies": {},
   "packageManager": "pnpm@9.15.5"
 }

@@ -1,4 +1,4 @@
-import type { EncodeMidiMetaEventWithTextFactory } from '~/types';
+import type { EncodeMidiMetaEventWithTextFactory } from '@midi-json-tools/types';
 
 /**
  * @name createEncodeMidiMetaEventWithText

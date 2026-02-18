@@ -24,6 +24,8 @@
     "build": "pnpm exec tsdown",
     "test:types": "tsc --noEmit"
   },
-  "dependencies": {},
+  "dependencies": {
+        "@midi-json-tools/types": "workspace:*"
+  },
   "packageManager": "pnpm@9.15.5"
 }

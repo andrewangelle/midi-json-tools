@@ -1,4 +1,4 @@
-import type { MidiEvent, MidiStatusEvent } from '~/types';
+import type { MidiEvent, MidiStatusEvent } from '@midi-json-tools/types';
 
 /**
  * @name isMidiStatusEvent
