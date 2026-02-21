@@ -71,10 +71,6 @@ importers:
       '@midi-json-tools/types':
         specifier: workspace:*
         version: link:../types
-    devDependencies:
-      '@midi-json-tools/midi-to-json':
-        specifier: workspace:*
-        version: link:../midi-to-json
 
   packages/midi-to-json:
     dependencies:

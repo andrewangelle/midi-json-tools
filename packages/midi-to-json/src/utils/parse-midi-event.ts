@@ -8,7 +8,7 @@ import type {
   MidiPitchBendEvent,
   MidiProgramChangeEvent,
   MidiStatusEvent,
-} from '~/types';
+} from '@midi-json-tools/types';
 import { hexifyNumber } from '~/utils/hexify-number';
 
 /**

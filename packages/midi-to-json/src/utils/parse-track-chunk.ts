@@ -1,4 +1,4 @@
-import type { MidiMetaEvent } from '~/types';
+import type { MidiMetaEvent } from '@midi-json-tools/types';
 import { isMidiStatusEvent } from '~/utils/is-midi-status-event';
 import { parseEvent } from '~/utils/parse-event';
 import { stringify } from '~/utils/stringify';

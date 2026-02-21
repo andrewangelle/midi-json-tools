@@ -2,15 +2,18 @@
  * @name stringify
  * @description This function turns a part of a given ArrayBuffer into a String.
  * @param {DataView} dataView
- * @param {number} offset
- * @param {number} length
+ * @param {number} offsetParam
+ * @param {number} lengthParam
  * @returns {string}
  */
 export function stringify(
   dataView: DataView,
-  offset = 0,
-  length = dataView.byteLength - (offset - dataView.byteOffset),
-) {
+  offsetParam?: number,
+  lengthParam?: number,
+): string {
+  const offset = offsetParam ?? 0;
+  const length =
+    lengthParam ?? dataView.byteLength - (offset - dataView.byteOffset);
   const byteOffset = offset + dataView.byteOffset;
   const raw = new Uint8Array(dataView.buffer, byteOffset, length);
   const decoder = new TextDecoder('utf-8');
