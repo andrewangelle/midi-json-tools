@@ -1,6 +1,6 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
-import type { MidiFile } from '@midi-json-tools/midi-to-json';
+import type { MidiFile } from '@midi-json-tools/types';
 
 export async function loadFixtureAsArrayBuffer(fileName: string) {
   const filePath = path.join(import.meta.dirname, `../fixtures/${fileName}`);

@@ -1,4 +1,4 @@
-import type { MidiSysexEvent } from '~/types';
+import type { MidiSysexEvent } from '@midi-json-tools/types';
 import { hexify } from '~/utils/hexify';
 import { readVariableLengthQuantity } from '~/utils/read-variable-length-quantity';
 
