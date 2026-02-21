@@ -318,10 +318,6 @@ export const createEncodeMidiEvent: EncodeMidiEventFactory = (
       return arrayBuffer;
     }
 
-    /*
-     * @todo This needs to be before isMidiTextEvent() because otherwise TypeScript gets confused to believe that isMidiTextEvent()
-     * will handle unknown text events as well.
-     */
     if (isMidiUnknownTextEvent(event)) {
       return encodeMidiMetaEventWithText(
         event,
