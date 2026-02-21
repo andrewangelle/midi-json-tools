@@ -14,10 +14,10 @@ export const createEncodeMidiMetaEventWithText: EncodeMidiMetaEventWithTextFacto
     return (event, metaTypeByte, key) => {
       const { arrayBuffer, dataView } = createArrayBufferWithDataView(2);
 
-      // Write an eventTypeByte with a value of 0xFF.
+      // eventTypeByte
       dataView.setUint8(0, 0xff);
 
-      // Write a metaTypeByte with the given value.
+      // metaTypeByte
       dataView.setUint8(1, metaTypeByte);
 
       const textArrayBuffer = textEncoder.encode(
