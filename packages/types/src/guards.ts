@@ -21,6 +21,7 @@ import type {
   MidiSequencerSpecificEvent,
   MidiSetTempoEvent,
   MidiSmpteOffsetEvent,
+  MidiStatusEvent,
   MidiSysexEvent,
   MidiTextEvent,
   MidiTimeSignatureEvent,
@@ -346,4 +347,16 @@ export function isMidiChannelPrefixEvent(
   event: Partial<MidiEvent>,
 ): event is MidiChannelPrefixEvent {
   return (<MidiChannelPrefixEvent>event).channelPrefix !== undefined;
+}
+
+/**
+ * @name isMidiStatusEvent
+ * @description type guard for a MidiStatusEvent object
+ * @param {Partial<MidiEvent>} midiEvent
+ * @returns {boolean}
+ */
+export function isMidiStatusEvent(
+  midiEvent: Partial<MidiEvent>,
+): midiEvent is MidiStatusEvent {
+  return (<MidiStatusEvent>midiEvent).channel !== undefined;
 }

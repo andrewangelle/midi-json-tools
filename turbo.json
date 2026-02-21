@@ -58,6 +58,16 @@
       "cache": true,
       "outputs": [],
       "dependsOn": []
+    },
+    "@midi-json-tools/test-utils#build": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": []
+    },
+    "@midi-json-tools/test-utils#test:types": {
+      "cache": true,
+      "outputs": [],
+      "dependsOn": ["build"]
     }
   }
 }
