@@ -1,4 +1,4 @@
-import type { WriteVariableLengthQuantityFactory } from '~/types';
+import type { WriteVariableLengthQuantityFactory } from '@midi-json-tools/types';
 
 const { floor, max, log } = Math;
 

@@ -26,7 +26,7 @@ import {
   isMidiTimeSignatureEvent,
   isMidiTrackNameEvent,
   isMidiUnknownTextEvent,
-} from '~/utils/guards';
+} from '@midi-json-tools/types';
 
 /**
  * @name createEncodeMidiEvent

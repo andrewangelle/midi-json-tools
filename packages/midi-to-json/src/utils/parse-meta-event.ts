@@ -18,7 +18,7 @@ import type {
   MidiTimeSignatureEvent,
   MidiTrackNameEvent,
   MidiUnknownTextEvent,
-} from '~/types';
+} from '@midi-json-tools/types';
 import { hexify } from '~/utils/hexify';
 import { hexifyNumber } from '~/utils/hexify-number';
 import { readVariableLengthQuantity } from '~/utils/read-variable-length-quantity';
