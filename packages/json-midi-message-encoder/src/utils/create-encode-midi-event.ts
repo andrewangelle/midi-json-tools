@@ -55,7 +55,7 @@ export const createEncodeMidiEvent: EncodeMidiEventFactory = (
     if (isMidiChannelPressureEvent(event)) {
       const { arrayBuffer, dataView } = createArrayBufferWithDataView(2);
 
-      dataView.setUint8(0, 0x0d | (event.channel & 0xf));
+      dataView.setUint8(0, 0xd0 | (event.channel & 0xf));
       dataView.setUint8(1, event.channelPressure.pressure);
 
       return arrayBuffer;
@@ -102,7 +102,7 @@ export const createEncodeMidiEvent: EncodeMidiEventFactory = (
     if (isMidiKeyPressureEvent(event)) {
       const { arrayBuffer, dataView } = createArrayBufferWithDataView(3);
 
-      dataView.setUint8(0, 0x0a | (event.channel & 0xf));
+      dataView.setUint8(0, 0xa0 | (event.channel & 0xf));
       dataView.setUint8(1, event.keyPressure.noteNumber);
       dataView.setUint8(2, event.keyPressure.pressure);
 

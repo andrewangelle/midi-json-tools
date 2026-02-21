@@ -1,6 +1,7 @@
 {
-  "name": "@midi-json-tools/midi-to-json",
-  "version": "2.0.1",
+  "name": "@midi-json-tools/test-utils",
+  "private": true,
+  "version": "1.0.0",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
   "readme": "https://github.com/andrewangelle/midi-json-tools/blob/main/packages/midi-to-json/README.md",
@@ -21,14 +22,11 @@
     "LICENSE.txt"
   ],
   "scripts": {
-    "build": "pnpm exec tsdown",
+    "build": "pnpm exec tsdown && node scripts/copy-fixtures.mjs",
     "test:types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@midi-json-tools/types": "workspace:*"
-  },
   "devDependencies": {
-    "@midi-json-tools/test-utils": "workspace:*"
+    "@midi-json-tools/types": "workspace:*"
   },
   "packageManager": "pnpm@9.15.5"
 }
