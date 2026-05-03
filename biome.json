@@ -3,6 +3,7 @@
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": false,
+    "maxSize": 10485760,
     "includes": [
       "**/examples/**/*.json",
       "**/examples/**/*.mjs",
