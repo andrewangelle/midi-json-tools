@@ -2,7 +2,7 @@ import {
   createArrayBufferWithDataView,
   encodeMidiEvent,
   writeVariableLengthQuantity,
-} from '@midi-json-tools/json-midi-message-encoder';
+} from '@midi-json-tools/encode-midi-event';
 import type { MidiEvent } from '@midi-json-tools/types';
 import { joinArrayBuffers } from '~/utils/join-array-buffers';
 
