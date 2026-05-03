@@ -14,9 +14,9 @@ These packages and the majority of their code originate from [midi-json-parser](
 [![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-to-midi.svg)](https://www.npmjs.com/package/@midi-json-tools/json-to-midi)
 [![@midi-json-tools/json-to-midi](https://jsr-badge.deno.dev/@midi-json-tools/json-to-midi/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/json-to-midi)
 
-##### @midi-json-tools/json-midi-message-encoder
-[![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-midi-message-encoder.svg)](https://www.npmjs.com/package/@midi-json-tools/json-midi-message-encoder)
-[![@midi-json-tools/json-midi-message-encoder](https://jsr-badge.deno.dev/@midi-json-tools/json-midi-message-encoder/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/json-midi-message-encoder)
+##### @midi-json-tools/encode-midi-event
+[![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-midi-message-encoder.svg)](https://www.npmjs.com/package/@midi-json-tools/encode-midi-event)
+[![@midi-json-tools/encode-midi-event](https://jsr-badge.deno.dev/@midi-json-tools/encode-midi-event/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/encode-midi-event)
 
 ## Getting Started 
 

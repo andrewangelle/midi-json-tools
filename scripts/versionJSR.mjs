@@ -33,7 +33,7 @@ for(
         ...updated,
         imports: {
           "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${packageJsonVersion}`,
-          "@midi-json-tools/json-midi-message-encoder": `jsr:@midi-json-tools/json-midi-message-encoder@^${packageJsonVersion}`
+          "@midi-json-tools/encode-midi-event": `jsr:@midi-json-tools/encode-midi-event@^${packageJsonVersion}`
         },
       }
 

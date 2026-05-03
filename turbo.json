@@ -16,7 +16,7 @@
       "outputs": [],
       "dependsOn": [
         "@midi-json-tools/types#build", 
-        "@midi-json-tools/json-midi-message-encoder#build"
+        "@midi-json-tools/encode-midi-event#build"
       ]
     },
     "@midi-json-tools/json-to-midi#test:types": {
@@ -29,7 +29,7 @@
       "outputs": [],
       "dependsOn": [
         "@midi-json-tools/types#build",
-        "@midi-json-tools/json-midi-message-encoder#build"
+        "@midi-json-tools/encode-midi-event#build"
       ]
     },
     "@midi-json-tools/midi-to-json#test:types": {
@@ -37,14 +37,14 @@
       "outputs": [],
       "dependsOn": ["build"]
     },
-    "@midi-json-tools/json-midi-message-encoder#build": {
+    "@midi-json-tools/encode-midi-event#build": {
       "cache": true,
       "outputs": [],
       "dependsOn": [
         "@midi-json-tools/types#build"
       ]
     },
-    "@midi-json-tools/json-midi-message-encoder#test:types": {
+    "@midi-json-tools/encode-midi-event#test:types": {
       "cache": true,
       "outputs": [],
       "dependsOn": []

@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@midi-json-tools/types": "workspace:*",
-    "@midi-json-tools/json-midi-message-encoder": "workspace:*"
+    "@midi-json-tools/encode-midi-event": "workspace:*"
   },
   "devDependencies": {
     "@midi-json-tools/test-utils": "workspace:*"

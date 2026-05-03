@@ -1,6 +1,6 @@
-# @midi-json-tools/json-midi-message-encoder
-[![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-midi-message-encoder.svg)](https://www.npmjs.com/package/@midi-json-tools/json-midi-message-encoder)
-[![@midi-json-tools/json-midi-message-encoder](https://jsr-badge.deno.dev/@midi-json-tools/json-midi-message-encoder/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/json-midi-message-encoder)
+# @midi-json-tools/encode-midi-event
+[![npm version](https://badge.fury.io/js/@midi-json-tools%2Fjson-midi-message-encoder.svg)](https://www.npmjs.com/package/@midi-json-tools/encode-midi-event)
+[![@midi-json-tools/encode-midi-event](https://jsr-badge.deno.dev/@midi-json-tools/encode-midi-event/stable.svg?label=jsr-package)](https://jsr.io/@midi-json-tools/encode-midi-event)
 
 
 This is a helper library used by [json-to-midi](https://www.npmjs.com/package/@midi-json-tools/json-to-midi). It handles encoding the individual events in a given track of a midi file
@@ -18,25 +18,25 @@ I don't forsee this being useful outside the source code of [json-to-midi](https
 
 *NPM*
 ```
-npm i @midi-json-tools/json-midi-message-encoder
+npm i @midi-json-tools/encode-midi-event
 ```
 
 *Yarn*
 ```
-yarn add @midi-json-tools/json-midi-message-encoder
+yarn add @midi-json-tools/encode-midi-event
 ```
 
 *PNPM*
 ```
-pnpm add @midi-json-tools/json-midi-message-encoder
+pnpm add @midi-json-tools/encode-midi-event
 ```
 
 *[JSR](https://jsr.io) / Deno*
 ```typescript
-import * as jsonMidiMessageEncoder from 'jsr:@midi-json-tools/json-midi-message-encoder'
+import * as jsonMidiMessageEncoder from 'jsr:@midi-json-tools/encode-midi-event'
 ```
 
 *ESM.SH*
 ```typescript
-import * as jsonMidiMessageEncoder from "https://esm.sh/@midi-json-tools/json-midi-message-encoder@latest";
+import * as jsonMidiMessageEncoder from "https://esm.sh/@midi-json-tools/encode-midi-event@latest";
 ```

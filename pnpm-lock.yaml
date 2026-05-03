@@ -60,7 +60,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/midi-to-json
 
-  packages/json-midi-message-encoder:
+  packages/encode-midi-event:
     dependencies:
       '@midi-json-tools/types':
         specifier: workspace:*
@@ -68,9 +68,9 @@ importers:
 
   packages/json-to-midi:
     dependencies:
-      '@midi-json-tools/json-midi-message-encoder':
+      '@midi-json-tools/encode-midi-event':
         specifier: workspace:*
-        version: link:../json-midi-message-encoder
+        version: link:../encode-midi-event
       '@midi-json-tools/types':
         specifier: workspace:*
         version: link:../types
