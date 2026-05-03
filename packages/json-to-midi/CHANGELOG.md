@@ -6,7 +6,7 @@
 
 - 51f3b46: Remove changesets fromd dependency to devDependencies
 - Updated dependencies [51f3b46]
-  - @midi-json-tools/encode-midi-event@2.0.1
+  - @midi-json-tools/json-midi-message-encoder@2.0.1
 
 ## 2.0.0
 
@@ -17,7 +17,7 @@
 ### Patch Changes
 
 - Updated dependencies [cce6b34]
-  - @midi-json-tools/encode-midi-event@2.0.0
+  - @midi-json-tools/json-midi-message-encoder@2.0.0
 
 ## 1.2.0
 
@@ -28,7 +28,7 @@
 ### Patch Changes
 
 - Updated dependencies [90dc322]
-  - @midi-json-tools/encode-midi-event@1.2.0
+  - @midi-json-tools/json-midi-message-encoder@1.2.0
 
 ## 1.1.1
 
@@ -36,7 +36,7 @@
 
 - 882c78a: Adding third party license info
 - Updated dependencies [882c78a]
-  - @midi-json-tools/encode-midi-event@1.1.1
+  - @midi-json-tools/json-midi-message-encoder@1.1.1
 
 ## 1.1.0
 
@@ -47,7 +47,7 @@
 ### Patch Changes
 
 - Updated dependencies [544f7cf]
-  - @midi-json-tools/encode-midi-event@1.1.0
+  - @midi-json-tools/json-midi-message-encoder@1.1.0
 
 ## 1.0.9
 
@@ -55,7 +55,7 @@
 
 - 5e2bc05: Updating dependency
 - Updated dependencies [804fe76]
-  - @midi-json-tools/encode-midi-event@1.0.9
+  - @midi-json-tools/json-midi-message-encoder@1.0.9
 
 ## 1.0.8
 
@@ -63,7 +63,7 @@
 
 - 1d63a0c: Add symbol definitions for jsr score
 - Updated dependencies [1d63a0c]
-  - @midi-json-tools/encode-midi-event@1.0.8
+  - @midi-json-tools/json-midi-message-encoder@1.0.8
 
 ## 1.0.7
 
@@ -71,7 +71,7 @@
 
 - eaaba5d: Testing JSR publish
 - Updated dependencies [eaaba5d]
-  - @midi-json-tools/encode-midi-event@1.0.7
+  - @midi-json-tools/json-midi-message-encoder@1.0.7
 
 ## 1.0.6
 
@@ -79,7 +79,7 @@
 
 - 61730ff: Testing JSR Publish
 - Updated dependencies [61730ff]
-  - @midi-json-tools/encode-midi-event@1.0.6
+  - @midi-json-tools/json-midi-message-encoder@1.0.6
 
 ## 1.0.5
 
@@ -87,7 +87,7 @@
 
 - 6c354bb: Adding jsr config, Adding symbol information to utils
 - Updated dependencies [6c354bb]
-  - @midi-json-tools/encode-midi-event@1.0.5
+  - @midi-json-tools/json-midi-message-encoder@1.0.5
 
 ## 1.0.4
 
@@ -95,7 +95,7 @@
 
 - 53ce1f4: Testing automation
 - Updated dependencies [53ce1f4]
-  - @midi-json-tools/encode-midi-event@1.0.4
+  - @midi-json-tools/json-midi-message-encoder@1.0.4
 
 ## 1.0.3
 
