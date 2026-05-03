@@ -1,4 +1,4 @@
-# @midi-json-tools/json-midi-message-encoder
+# @midi-json-tools/encode-midi-event
 
 ## 2.0.1
 

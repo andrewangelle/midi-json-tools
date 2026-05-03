@@ -1,7 +1,7 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@midi-json-tools/json-midi-message-encoder@^2.0.1": "2.0.1",
+    "jsr:@midi-json-tools/encode-midi-event@^2.0.1": "2.0.1",
     "jsr:@midi-json-tools/json-to-midi@^2.0.1": "2.0.1",
     "jsr:@midi-json-tools/midi-to-json@^2.0.1": "2.0.1",
     "jsr:@std/assert@0.226": "0.226.0",
@@ -13,13 +13,13 @@
     "npm:@types/node@*": "24.2.0"
   },
   "jsr": {
-    "@midi-json-tools/json-midi-message-encoder@2.0.1": {
+    "@midi-json-tools/encode-midi-event@2.0.1": {
       "integrity": "3170c1fd97db62bbf2f3fefc453cf6fc17a26c25192759dceff40af9e938a9c3"
     },
     "@midi-json-tools/json-to-midi@2.0.1": {
       "integrity": "c90b4cceaeda7e47b40e18fbb06e5ffa7b38b265cfee1b1224a60eb18286de71",
       "dependencies": [
-        "jsr:@midi-json-tools/json-midi-message-encoder",
+        "jsr:@midi-json-tools/encode-midi-event",
         "jsr:@midi-json-tools/midi-to-json"
       ]
     },

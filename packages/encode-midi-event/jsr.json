@@ -1,6 +1,6 @@
 {
   "$schema": "https://jsr.io/schema/config-file.v1.json",
-  "name": "@midi-json-tools/json-midi-message-encoder",
+  "name": "@midi-json-tools/encode-midi-event",
   "version": "2.0.1",
   "exports": "./src/index.ts",
   "exclude": ["test"],

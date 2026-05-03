@@ -1,4 +1,4 @@
-import { createArrayBufferWithDataView } from '@midi-json-tools/json-midi-message-encoder';
+import { createArrayBufferWithDataView } from '@midi-json-tools/encode-midi-event';
 import type { MidiEvent } from '@midi-json-tools/types';
 
 /**
