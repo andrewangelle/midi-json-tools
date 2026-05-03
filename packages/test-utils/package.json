@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "pnpm exec tsdown && node scripts/copy-fixtures.mjs",
-    "test:types": "tsc --noEmit"
+    "test:types": "tsgo --noEmit"
   },
   "devDependencies": {
     "@midi-json-tools/types": "workspace:*"

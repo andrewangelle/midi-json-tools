@@ -16,14 +16,13 @@
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.mts",
-  "test:types": "tsc --noEmit",
   "files": [
     "dist",
     "LICENSE.txt"
   ],
   "scripts": {
     "build": "pnpm exec tsdown",
-    "test:types": "tsc --noEmit"
+    "test:types": "tsgo --noEmit"
   },
   "dependencies": {
     "@midi-json-tools/types": "workspace:*"

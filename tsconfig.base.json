@@ -2,6 +2,7 @@
   "compilerOptions": {
     "types": ["vitest/globals", "@types/node"],
     "declaration": false,
+    "skipLibCheck": true,
     "moduleResolution": "bundler", 
     "target": "esnext",
     "module": "esnext",

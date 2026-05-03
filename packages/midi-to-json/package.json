@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "pnpm exec tsdown",
-    "test:types": "tsc --noEmit"
+    "test:types": "tsgo --noEmit"
   },
   "dependencies": {
     "@midi-json-tools/types": "workspace:*"
