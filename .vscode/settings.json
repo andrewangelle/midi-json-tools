@@ -24,5 +24,6 @@
     "source.fixAll.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.tsdk": "node_modules/typescript/lib"
 }
