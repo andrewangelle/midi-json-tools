@@ -1,5 +1,13 @@
 # @midi-json-tools/midi-to-json
 
+## 2.0.2-next.0
+
+### Patch Changes
+
+- 61ca4e1: Update and remap dependencies to use the types, test utils, and renamed encoder package. Update typescript to v6
+- Updated dependencies [61ca4e1]
+  - @midi-json-tools/types@1.0.0-next.0
+
 ## 2.0.1
 
 ### Patch Changes
