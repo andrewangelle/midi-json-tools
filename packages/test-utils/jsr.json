@@ -1,0 +1,8 @@
+{
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@midi-json-tools/test-utils",
+  "version": "0.1.0",
+  "exports": "./src/index.ts",
+  "exclude": ["test"],
+  "publish": { "exclude": ["!dist"] }
+}
