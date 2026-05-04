@@ -1,5 +1,16 @@
 # @midi-json-tools/encode-midi-event
 
+## 3.0.0-next.0
+
+### Major Changes
+
+- 61ca4e1: Package renamed from @midi-json-tools/json-midi-message-encoder to @midi-json-tools/encode-midi-event
+
+### Patch Changes
+
+- Updated dependencies [61ca4e1]
+  - @midi-json-tools/types@1.0.0-next.0
+
 ## 2.0.1
 
 ### Patch Changes
