@@ -8,27 +8,66 @@ We have a quick list of common questions to get you started engaging with this p
 [our documentation](https://github.com/changesets/changesets/blob/main/docs/common-questions.md)
 
 
-## Steps
+## Steps to publish local
 
-```
+```sh
 $ pnpm exec changeset
 ```
 Walk through the prompts, then...
 
-```
+```sh
 $ pnpm exec changeset version
 ```
 Commit the result, then...
 
-```
+```sh
 $ pnpm build
 ```
 then...
-```
+```sh
 $ pnpm exec changeset publish 
 ```
 Put in otp, then...
 
-```
+```sh
 git push --follow-tags
 ```
+
+
+## Prerelease Steps
+
+Add a normal set of changeset
+```sh
+pnpm exec @changesets/cli
+```
+
+Enter prerelease mode
+```sh
+pnpm exec changeset pre enter next
+```
+
+Version the prerelease with a tag
+```sh
+pnpm exec changeset version 
+```
+
+Publish the prerelease
+```sh
+pnpm exec changeset publish
+```
+
+Push up the tags
+```sh
+git push --follow-tags
+```
+
+Before PRing the next branch into main run...
+```sh
+pnpm exec changeset pre exit
+```
+
+```sh
+pnpm exec changeset version
+```
+
+Then commit a version commit and PR
