@@ -1,8 +1,8 @@
-import { defineConfig, TestProjectConfiguration } from 'vitest/config';
+import { defineConfig, TestProjectConfiguration, coverageConfigDefaults} from 'vitest/config';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
 const packages = [
-  'json-midi-message-encoder',
+  'encode-midi-event',
   'json-to-midi',
   'midi-to-json'
 ]
@@ -36,6 +36,12 @@ export default defineConfig({
     coverage: {
       reportsDirectory: 'coverage',
       provider: 'v8',
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        '**/*/index.ts',
+        'packages/json-to-midi/src/utils/errors.ts',
+        '**/dist/**/*',
+      ]
     },
     projects: configs
   } 
