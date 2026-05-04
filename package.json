@@ -14,7 +14,7 @@
     "pre-commit": "lint-staged",
     "ci:publish": "pnpm build && pnpm exec changeset publish",
     "ci:version": "pnpm exec changeset version && node ./scripts/versionJSR.mjs && pnpm update:deno:lock && pnpm install && pnpm format",
-    "ci:publish:jsr": "cd ./packages/midi-to-json && pnpx jsr publish && cd ../json-midi-message-encoder && pnpx jsr publish && cd ../json-to-midi && pnpx jsr publish",
+    "ci:publish:jsr": "cd ./packages/midi-to-json && pnpx jsr publish && cd ../encode-midi-event && pnpx jsr publish && cd ../json-to-midi && pnpx jsr publish && cd ../types && pnpx jsr publish && cd ../test-utils && pnpx jsr publish",
     "update:deno:lock": "cd ./examples/deno && deno install && cd ../../"
   },
   "husky": {
