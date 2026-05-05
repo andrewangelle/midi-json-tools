@@ -1,6 +1,5 @@
 {
   "name": "@midi-json-tools/test-utils",
-  "private": true,
   "version": "1.0.0-next.0",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
