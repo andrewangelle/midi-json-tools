@@ -6,6 +6,27 @@
   "imports": {
     "@midi-json-tools/types": "jsr:@midi-json-tools/types@^1.0.0-next.0"
   },
-  "exclude": ["test"],
-  "publish": { "exclude": ["!dist"] }
+  "exclude": [
+    "test",
+    "src/fixtures/rachmaninov3.json",
+    "src/fixtures/SubTractor 1.json",
+    "src/fixtures/SubTractor 1.mid",
+    "src/fixtures/SubTractor 2.json",
+    "src/fixtures/SubTractor 2.mid",
+    "dist/fixtures/rachmaninov3.json",
+    "dist/fixtures/SubTractor 1.json",
+    "dist/fixtures/SubTractor 1.mid",
+    "dist/fixtures/SubTractor 2.json",
+    "dist/fixtures/SubTractor 2.mid"
+  ],
+  "publish": {
+    "exclude": [
+      "!dist",
+      "dist/fixtures/rachmaninov3.json",
+      "dist/fixtures/SubTractor 1.json",
+      "dist/fixtures/SubTractor 1.mid",
+      "dist/fixtures/SubTractor 2.json",
+      "dist/fixtures/SubTractor 2.mid"
+    ]
+  }
 }
