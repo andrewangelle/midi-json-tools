@@ -4,6 +4,7 @@
   "version": "2.0.2-next.0",
   "exports": "./src/index.ts",
   "imports": {
+    "~/": "./src/",
     "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.0.2-next.0",
     "@midi-json-tools/encode-midi-event": "jsr:@midi-json-tools/encode-midi-event@^3.0.0-next.0"
   },
