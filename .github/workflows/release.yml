@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
     paths:
       - ".changeset/**"
       - ".github/workflows/release.yml"
@@ -18,22 +19,56 @@ jobs:
     name: changesets_release
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    if: github.ref_name == 'main' || github.ref_name == 'develop'
     outputs:
       published: ${{ steps.output_published.outputs.PUBLISHED }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@64
+        with:
+          node-version: lts/*
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
           version: 9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4
 
-      - name: Install Dependencies
-        run: pnpm install
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v5
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Setup deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: lts
+
+      - name: Select changesets base branch config
+        shell: bash
+        run: |
+          case "${GITHUB_REF_NAME}" in
+            develop)
+              cp ".changeset/config.develop.json" ".changeset/config.json"
+              ;;
+            main)
+              cp ".changeset/config.main.json" ".changeset/config.json"
+              ;;
+            *)
+              echo "Unsupported release branch: ${GITHUB_REF_NAME}"
+              exit 1
+              ;;
+          esac
 
       - name: Create Release Pull Request or Publish to NPM
         id: changesets
@@ -61,22 +96,37 @@ jobs:
       contents: read
       id-token: write # The OIDC ID token is used for authentication with JSR.
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v6
 
-    - name: Setup Node
-      uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@64
+        with:
+          node-version: lts/*
 
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
-      with:
-        version: 9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          version: 9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4 
 
-    - name: Install Dependencies
-      run: pnpm install
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-    - name: Run production build
-      run: pnpm build
+      - uses: actions/cache@v5
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-    - name: Publish to JSR
-      run: cd ./packages/midi-to-json && pnpx jsr publish && cd ../json-midi-message-encoder && pnpx jsr publish && cd ../json-to-midi && pnpx jsr publish
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Run production build
+        run: pnpm build
+
+      - name: Publish to JSR
+        run: pnpm ci:publish:jsr
