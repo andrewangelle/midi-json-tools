@@ -25,5 +25,10 @@
     "source.organizeImports.biome": "explicit"
   },
   "js/ts.experimental.useTsgo": true,
-  "js/ts.tsdk": "node_modules/typescript/lib"
+  "js/ts.tsdk": "node_modules/typescript/lib",
+  "deno.enable": false,
+  "deno.config": "./examples/deno/deno.json",
+  "deno.enablePaths": [
+    "./examples/deno"
+  ]
 }
