@@ -1,5 +1,13 @@
 # @midi-json-tools/midi-to-json
 
+## 2.0.2-next.2
+
+### Patch Changes
+
+- 0ddcf43: Version bump only. Setting up the new packages with JSR publishing
+- Updated dependencies [0ddcf43]
+  - @midi-json-tools/types@1.0.0-next.2
+
 ## 2.0.2-next.1
 
 ### Patch Changes
