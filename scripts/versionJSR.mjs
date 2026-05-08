@@ -81,7 +81,10 @@ async function* walk(directoryPath) {
     const entry =  join(directoryPath, target.name);
     const isFileMatch = target.isFile() && /(package\.json|jsr\.json)/.test(entry);
 
-    if (target.isDirectory()) yield* walk(entry); 
+    if (target.isDirectory()) {
+      if (entry === join(packagesDirectory, 'test-utils')) continue;
+      yield* walk(entry);
+    }
     else if (isFileMatch) yield entry;
   }
 }
