@@ -6,7 +6,6 @@
     "@midi-json-tools/encode-midi-event": "2.0.1",
     "@midi-json-tools/json-to-midi": "2.0.1",
     "@midi-json-tools/midi-to-json": "2.0.1",
-    "@midi-json-tools/test-utils": "0.1.0",
     "@midi-json-tools/types": "0.1.0"
   },
   "changesets": [
