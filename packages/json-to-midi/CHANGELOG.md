@@ -1,5 +1,14 @@
 # @midi-json-tools/json-to-midi
 
+## 2.0.2-next.1
+
+### Patch Changes
+
+- 7799a33: Version bump only to verify marking test-utils as private
+- Updated dependencies [7799a33]
+  - @midi-json-tools/encode-midi-event@3.0.0-next.1
+  - @midi-json-tools/types@1.0.0-next.1
+
 ## 2.0.2-next.0
 
 ### Patch Changes
