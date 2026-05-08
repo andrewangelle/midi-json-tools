@@ -1,5 +1,11 @@
 # @midi-json-tools/types
 
+## 1.0.0-next.4
+
+### Patch Changes
+
+- e184bd6: Version bump only.
+
 ## 1.0.0-next.3
 
 ### Patch Changes

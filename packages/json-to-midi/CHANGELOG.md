@@ -1,5 +1,14 @@
 # @midi-json-tools/json-to-midi
 
+## 2.0.2-next.4
+
+### Patch Changes
+
+- e184bd6: Version bump only.
+- Updated dependencies [e184bd6]
+  - @midi-json-tools/encode-midi-event@3.0.0-next.4
+  - @midi-json-tools/types@1.0.0-next.4
+
 ## 2.0.2-next.3
 
 ### Patch Changes

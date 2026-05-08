@@ -1,6 +1,6 @@
 {
   "name": "@midi-json-tools/encode-midi-event",
-  "version": "3.0.0-next.3",
+  "version": "3.0.0-next.4",
   "license": "MIT",
   "author": "Andrew Angelle <andrewangelle@gmail.com>",
   "homepage": "https://github.com/andrewangelle/midi-json-tools#readme",
