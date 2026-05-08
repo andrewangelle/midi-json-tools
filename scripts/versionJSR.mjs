@@ -14,10 +14,15 @@ const denoExamplesJsonPath = join(__dirname, '../examples/deno/deno.json')
  * Compare the jsr.json versions with the package.json versions.
  * Update the jsr.json to match package.json if they differ.
  */
+const allPackageInfo = await getPackageInfo();
+const packageVersionByName = new Map(
+  allPackageInfo.map(({ name, packageJsonVersion }) => [name, packageJsonVersion]),
+);
+
 for(
   const { packageJsonVersion, jsrJsonVersion, jsrJsonPath } 
   of 
-  await getPackageInfo()
+  allPackageInfo
 ){
 
   if(packageJsonVersion !== jsrJsonVersion){
@@ -29,13 +34,20 @@ for(
     }
 
     if(jsrJsonPath.includes('json-to-midi')) {
+      const typesVersion =
+        packageVersionByName.get('@midi-json-tools/types') ?? packageJsonVersion;
+      const midiToJsonVersion =
+        packageVersionByName.get('@midi-json-tools/midi-to-json') ?? packageJsonVersion;
+      const encodeMidiEventVersion =
+        packageVersionByName.get('@midi-json-tools/encode-midi-event') ?? packageJsonVersion;
+
       updated = {
         ...updated,
         imports: {
           "~/": "./src/",
-          "@midi-json-tools/types": `jsr:@midi-json-tools/types@^${packageJsonVersion}`,
-          "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${packageJsonVersion}`,
-          "@midi-json-tools/encode-midi-event": `jsr:@midi-json-tools/encode-midi-event@^${packageJsonVersion}`
+          "@midi-json-tools/types": `jsr:@midi-json-tools/types@^${typesVersion}`,
+          "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${midiToJsonVersion}`,
+          "@midi-json-tools/encode-midi-event": `jsr:@midi-json-tools/encode-midi-event@^${encodeMidiEventVersion}`
         },
       }
 
