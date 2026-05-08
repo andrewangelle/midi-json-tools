@@ -1,5 +1,13 @@
 # @midi-json-tools/encode-midi-event
 
+## 3.0.0-next.5
+
+### Patch Changes
+
+- ccef756: Version bump only
+- Updated dependencies [ccef756]
+  - @midi-json-tools/types@1.0.0-next.5
+
 ## 3.0.0-next.4
 
 ### Patch Changes
