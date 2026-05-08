@@ -1,13 +1,11 @@
 {
   "$schema": "https://jsr.io/schema/config-file.v1.json",
   "name": "@midi-json-tools/json-to-midi",
-  "version": "2.0.2-next.0",
+  "version": "2.0.2-next.3",
   "exports": "./src/index.ts",
   "imports": {
-    "~/": "./src/",
-    "@midi-json-tools/types": "jsr:@midi-json-tools/types@^1.0.0-next.0",
-    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.0.2-next.0",
-    "@midi-json-tools/encode-midi-event": "jsr:@midi-json-tools/encode-midi-event@^3.0.0-next.0"
+    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.0.2-next.3",
+    "@midi-json-tools/encode-midi-event": "jsr:@midi-json-tools/encode-midi-event@^2.0.2-next.3"
   },
   "exclude": ["test"],
   "publish": { "exclude": ["!dist"] }
