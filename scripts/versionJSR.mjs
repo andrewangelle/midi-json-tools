@@ -32,6 +32,8 @@ for(
       updated = {
         ...updated,
         imports: {
+          "~/": "./src/",
+          "@midi-json-tools/types": `jsr:@midi-json-tools/types@^${packageJsonVersion}`,
           "@midi-json-tools/midi-to-json": `jsr:@midi-json-tools/midi-to-json@^${packageJsonVersion}`,
           "@midi-json-tools/encode-midi-event": `jsr:@midi-json-tools/encode-midi-event@^${packageJsonVersion}`
         },
