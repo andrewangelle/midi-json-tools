@@ -1,5 +1,13 @@
 # @midi-json-tools/encode-midi-event
 
+## 3.0.0-next.3
+
+### Patch Changes
+
+- 1ad1150: Version bump only. Testing automated publishing flow for JSR
+- Updated dependencies [1ad1150]
+  - @midi-json-tools/types@1.0.0-next.3
+
 ## 3.0.0-next.2
 
 ### Patch Changes

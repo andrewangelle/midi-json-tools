@@ -1,5 +1,11 @@
 # @midi-json-tools/types
 
+## 1.0.0-next.3
+
+### Patch Changes
+
+- 1ad1150: Version bump only. Testing automated publishing flow for JSR
+
 ## 1.0.0-next.2
 
 ### Patch Changes
