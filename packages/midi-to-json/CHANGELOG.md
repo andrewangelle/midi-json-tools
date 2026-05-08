@@ -1,5 +1,13 @@
 # @midi-json-tools/midi-to-json
 
+## 2.0.2-next.5
+
+### Patch Changes
+
+- ccef756: Version bump only
+- Updated dependencies [ccef756]
+  - @midi-json-tools/types@1.0.0-next.5
+
 ## 2.0.2-next.4
 
 ### Patch Changes
