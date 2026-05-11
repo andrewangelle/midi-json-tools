@@ -1,5 +1,26 @@
 # @midi-json-tools/encode-midi-event
 
+## 3.0.0
+
+### Major Changes
+
+- 99ba2bb: Package renamed from @midi-json-tools/json-midi-message-encoder to @midi-json-tools/encode-midi-event. Fixing incorrect status bytes for channel and key pressure events.
+
+### Patch Changes
+
+- 557db7d: Version bump only. Setting up the new packages with JSR publishing
+- 741a004: Version bump only
+- 0ebd957: Version bump only.
+- c65e766: Version bump only to verify marking test-utils as private
+- 21896ec: Version bump only. Testing automated publishing flow for JSR
+- Updated dependencies [557db7d]
+- Updated dependencies [741a004]
+- Updated dependencies [99ba2bb]
+- Updated dependencies [0ebd957]
+- Updated dependencies [c65e766]
+- Updated dependencies [21896ec]
+  - @midi-json-tools/types@1.0.0
+
 ## 3.0.0-next.5
 
 ### Patch Changes
