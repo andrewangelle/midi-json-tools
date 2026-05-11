@@ -1,5 +1,11 @@
 # @midi-json-tools/json-to-midi
 
+## 2.1.0-next.6
+
+### Minor Changes
+
+- 82c7d88: Fixing incorrect status bytes for channel and key pressure
+
 ## 2.0.2-next.5
 
 ### Patch Changes
