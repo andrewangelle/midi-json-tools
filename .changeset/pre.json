@@ -10,6 +10,7 @@
     "@midi-json-tools/test-utils": "1.0.0-next.0"
   },
   "changesets": [
+    "afraid-comics-greet",
     "bold-phones-wave",
     "eighty-donkeys-invent",
     "large-turtles-allow",
