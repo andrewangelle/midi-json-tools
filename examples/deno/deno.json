@@ -2,7 +2,8 @@
   "tasks": {
     "dev": "deno run -P --watch ./src/main.ts",
     "run": "deno run -P ./src/main.ts",
-    "test": "deno test -P ./test"
+    "test": "deno test -P ./test",
+    "regen-fixtures": "deno run -P --allow-read=./test --allow-write=./test ./scripts/regen-fixtures.ts"
   },
   "imports": {
     "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^2.0.2-next.5",
