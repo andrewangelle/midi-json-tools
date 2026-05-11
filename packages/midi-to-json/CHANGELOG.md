@@ -1,5 +1,27 @@
 # @midi-json-tools/midi-to-json
 
+## 2.1.0
+
+### Minor Changes
+
+- f377e67: Fixing incorrect status bytes for channel and key pressure
+
+### Patch Changes
+
+- 99ba2bb: Update and remap dependencies to use the types, test utils, and renamed encoder package. Update typescript to v6
+- 557db7d: Version bump only. Setting up the new packages with JSR publishing
+- 741a004: Version bump only
+- 0ebd957: Version bump only.
+- c65e766: Version bump only to verify marking test-utils as private
+- 21896ec: Version bump only. Testing automated publishing flow for JSR
+- Updated dependencies [557db7d]
+- Updated dependencies [741a004]
+- Updated dependencies [99ba2bb]
+- Updated dependencies [0ebd957]
+- Updated dependencies [c65e766]
+- Updated dependencies [21896ec]
+  - @midi-json-tools/types@1.0.0
+
 ## 2.1.0-next.6
 
 ### Minor Changes
