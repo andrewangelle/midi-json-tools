@@ -1,5 +1,19 @@
 # @midi-json-tools/types
 
+## 1.0.0
+
+### Major Changes
+
+- 52d65bc: First release
+
+### Patch Changes
+
+- 0ddcf43: Version bump only. Setting up the new packages with JSR publishing
+- ccef756: Version bump only
+- e184bd6: Version bump only.
+- 7799a33: Version bump only to verify marking test-utils as private
+- 1ad1150: Version bump only. Testing automated publishing flow for JSR
+
 ## 1.0.0-next.5
 
 ### Patch Changes
