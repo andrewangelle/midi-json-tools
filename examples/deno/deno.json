@@ -6,8 +6,8 @@
     "regen-fixtures": "deno run -P --allow-read=./test --allow-write=./test ./scripts/regen-fixtures.ts"
   },
   "imports": {
-    "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^2.0.2-next.5",
-    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.0.2-next.5",
+    "@midi-json-tools/json-to-midi": "jsr:@midi-json-tools/json-to-midi@^2.1.0",
+    "@midi-json-tools/midi-to-json": "jsr:@midi-json-tools/midi-to-json@^2.1.0",
     "@std/cli": "jsr:@std/cli@^1.0.27",
     "@std/assert": "jsr:@std/assert@^1.0.18"
   },
