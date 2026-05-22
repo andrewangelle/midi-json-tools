@@ -46,3 +46,5 @@ Thumbs.db
 
 # Examples
 examples/example-output/**/*
+
+.pnpm-store
